@@ -1,0 +1,20 @@
+{
+  "name": "fom-ai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local, evidence-checked extraction of Myanmar and English order messages",
+  "license": "MIT",
+  "packageManager": "pnpm@9.15.9",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "pnpm --filter api test",
+    "build": "pnpm --filter api build",
+    "typecheck": "pnpm --filter api typecheck",
+    "extract": "pnpm --silent --filter api extract",
+    "baseline": "pnpm --silent --filter api baseline",
+    "check:public": "python3 scripts/check_public.py",
+    "check:platform": "python3 scripts/check_platform.py"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "evaluation_version": "development-v2-prompt-ab",
+  "max_input_characters": 5000,
+  "context_tokens": 8192,
+  "output_tokens": 2048,
+  "deadline_seconds": 60,
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "seed": 42,
+  "stability_seeds": [],
+  "warmup_requests": 2,
+  "parallel": 1,
+  "thinking": false
+}

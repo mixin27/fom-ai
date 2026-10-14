@@ -1,0 +1,33 @@
+{
+  "repository_base_commit": "982422baa47dbc1c992626921208508b3138f25a",
+  "node_version": "24.21.0",
+  "pnpm_version": "9.15.9",
+  "pnpm_lock_sha256": "8b6b7610913a2ac184d2f52a370c47b603009d604ae625bd2c69577b79d95cf4",
+  "python_version": "3.12.12",
+  "hardware": "Apple M1 Pro, 8 physical CPU cores, 16 GiB unified RAM",
+  "detected_accelerator": "MTL0: Apple M1 Pro",
+  "model_cpu_threads": "llama.cpp default selected 6",
+  "ci_node_version": "22",
+  "notes": [
+    "Node/pnpm and lockfile information supplement the frozen source/model protocol.",
+    "Model timings use the native Metal runtime. No Docker or remote inference.",
+    "RSS sampling is not a measurement of total unified-memory pressure or exclusive GPU allocation.",
+    "Cold startup means process launch to health, with normal macOS filesystem caches. SHA verification before launch is excluded.",
+    "The deterministic baseline parity tests also run under the repository's Node 22 CI convention. Local measured parser timings use Node 24.21.0.",
+    "The 4B recorded wall span exceeds summed request timers substantially. The cause of the unmeasured gap was not verified; use request latency samples, not this wall span, for comparison. This was not a controlled continuous-throughput or thermal benchmark."
+  ],
+  "run_spans": {
+    "qwen3-4b": {
+      "recorded_wall_span_seconds": 5617.12,
+      "sum_request_timer_seconds": 1803.42
+    },
+    "baseline": {
+      "recorded_wall_span_seconds": 3.08,
+      "sum_request_timer_seconds": 0.03
+    },
+    "qwen3-1.7b": {
+      "recorded_wall_span_seconds": 937.7,
+      "sum_request_timer_seconds": 935.36
+    }
+  }
+}

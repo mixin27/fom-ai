@@ -1,0 +1,11 @@
+{
+  "version": "contrastive-development-01",
+  "scope": "Known provisional development cases only; never pilot approval",
+  "reference": "control from development-v2-prompt-ab-01",
+  "non_regression_metrics": ["phone_errors", "quantity_errors", "price_errors"],
+  "require_complete_drafts_not_lower": true,
+  "require_failures_not_higher": true,
+  "require_at_least_one_strict_improvement": true,
+  "label_review_required_before_heldout_freeze": true,
+  "stability_measured": false
+}

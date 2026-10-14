@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 5
+# Python requirements are part of the frozen benchmark protocol. Upgrade them
+# through a reviewed evaluation version, rather than rewriting history automatically.

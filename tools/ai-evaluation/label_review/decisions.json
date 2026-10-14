@@ -1,0 +1,22 @@
+{
+  "version": "development-v2-r1",
+  "recorded_on": "2026-10-11",
+  "authority": "User answers in this conversation; not independent language review",
+  "decisions": [
+    {
+      "id": "unqualified-price",
+      "question": "For supplied Qty: 2 / Price: 18,000 or Longyi x2 18000 formats, is the amount consistently a unit price?",
+      "answer": "It depends on the shop or message",
+      "rule": "When quantity exceeds one and no explicit per-unit or total meaning is stated, unit_price stays null with an ambiguity label. Keep a price attached to exactly one item: unit and line amount are identical without division. Do not infer a missing quantity or divide totals."
+    },
+    {
+      "id": "correction-note",
+      "question": "Should correction text also be kept in the note after correcting the field?",
+      "answer": "Only use the corrected field",
+      "rule": "Apply phone/address corrections to the field without copying correction text into note. Keep separately stated fulfillment instructions."
+    }
+  ],
+  "independent_language_review_complete": false,
+  "township_alias_review_complete": false,
+  "allowed_use": "Development only; new labels do not revise historical scores or approve a pilot"
+}

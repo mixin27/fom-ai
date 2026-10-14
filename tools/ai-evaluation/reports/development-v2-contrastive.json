@@ -1,0 +1,5539 @@
+{
+  "case_scores": {
+    "contrastive": [
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "Sanchaung Tsp",
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-01",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 3,
+          "unsupported_values": 3
+        },
+        "errors": [
+          {
+            "actual": "Sanchaung Tsp",
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          },
+          {
+            "actual": "Longyi Set x၂ ၁၈,၀၀၀",
+            "baseline_default": false,
+            "expected": "Longyi Set",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 18000,
+            "field": "items.0.unit_price"
+          },
+          {
+            "actual": "ငွေလွှဲပြီး",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-02",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 2,
+          "phone_errors": 0,
+          "price_errors": 2,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Sample Customer A",
+            "field": "customer.name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          },
+          {
+            "actual": "Silk Longyi Set x2 18000",
+            "baseline_default": false,
+            "expected": "Silk Longyi Set",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 18000,
+            "field": "items.0.unit_price"
+          },
+          {
+            "actual": "Handbag x1 25000",
+            "baseline_default": false,
+            "expected": "Handbag",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 25000,
+            "field": "items.1.unit_price"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            25000
+          ],
+          "subtotal": 61000,
+          "total": 64000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 2,
+            "fp": 2,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 2,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-03",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null,
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            25000
+          ],
+          "subtotal": 61000,
+          "total": 64000
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-04",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000,
+            25000
+          ],
+          "subtotal": 61000,
+          "total": 64000
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 3,
+          "unsupported_values": 3
+        },
+        "errors": [
+          {
+            "actual": "Silk Longyi Set x2 18000",
+            "baseline_default": false,
+            "expected": "Silk Longyi Set",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": "Handbag x1 25000",
+            "baseline_default": false,
+            "expected": "Handbag",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": "Shirt x3 12000",
+            "baseline_default": false,
+            "expected": "Shirt",
+            "field": "items.2.product_name"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            25000,
+            36000
+          ],
+          "subtotal": 97000,
+          "total": 100000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 3,
+            "fp": 3,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 3
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 3
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-05",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000,
+            25000,
+            36000
+          ],
+          "subtotal": 97000,
+          "total": 100000
+        },
+        "valid": true
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-06",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 4,
+          "unsupported_values": 4
+        },
+        "errors": [
+          {
+            "actual": "စမ်းသပ်သူ",
+            "baseline_default": false,
+            "expected": "စမ်းသပ်သူ က",
+            "field": "customer.name"
+          },
+          {
+            "actual": "Sanchaung Tsp",
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          },
+          {
+            "actual": "Dress / အရောင် Black / အရွယ် XL",
+            "baseline_default": false,
+            "expected": "Dress (Black, XL)",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": "ငွေလွှဲထား",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-07",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "Mingaladon Tsp",
+            "baseline_default": false,
+            "expected": "Mingaladon",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 40000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-08",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 40000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Hlaing",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            75000
+          ],
+          "subtotal": 111000,
+          "total": 116000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-09",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000,
+            75000
+          ],
+          "subtotal": 111000,
+          "total": 116000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 5,
+          "unsupported_values": 5
+        },
+        "errors": [
+          {
+            "actual": "မင်မင် B789 ဂျာကင် အနက်ရောင် L ဆိုဒ် တစ်ထည်ယူမယ်နော်။",
+            "baseline_default": false,
+            "expected": null,
+            "field": "customer.address"
+          },
+          {
+            "actual": "မင်မင် B789 ဂျာကင် အနက်ရောင် L ဆိုဒ် တစ်ထည်ယူမယ်နော်။",
+            "baseline_default": false,
+            "expected": null,
+            "field": "customer.name"
+          },
+          {
+            "actual": 0,
+            "baseline_default": false,
+            "expected": null,
+            "field": "delivery_fee"
+          },
+          {
+            "actual": "မင်မင် B789 ဂျာကင် အနက်ရောင် L ဆိုဒ် တစ်ထည်ယူမယ်နော်။",
+            "baseline_default": false,
+            "expected": "B789 ဂျာကင် အနက်ရောင် L ဆိုဒ်",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": "ပို့ခဘယ်လောက်လဲ",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            17000
+          ],
+          "subtotal": 17000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-10",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            17000
+          ],
+          "subtotal": 17000,
+          "total": 17000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "အိမ်ရောက်ငွေချေပါမယ်",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            7500
+          ],
+          "subtotal": 7500,
+          "total": 9500
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-11",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            7500
+          ],
+          "subtotal": 7500,
+          "total": 9500
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "ချည်သားတီရှပ် M ဆိုဒ် နှစ်ထည်ယူမယ်",
+            "baseline_default": false,
+            "expected": "ချည်သားတီရှပ် M ဆိုဒ် အဖြူ",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "ချည်သားတီရှပ် M ဆိုဒ် အနက်",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 1,
+            "field": "items.1.qty"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            null,
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 2,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 2,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-12",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": 2,
+            "baseline_default": false,
+            "expected": 3,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": "မင်မင် ၃ဘူးလုပ်ပေးပါနော်",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            22500
+          ],
+          "subtotal": 22500,
+          "total": 22500
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-13",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            15000
+          ],
+          "subtotal": 15000,
+          "total": 15000
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 4,
+          "unsupported_values": 4
+        },
+        "errors": [
+          {
+            "actual": "မြန်မာစာလေ့ကျင့်ခန်းစာအုပ် ၂အုပ် တစ်အုပ် ၄၅၀၀",
+            "baseline_default": false,
+            "expected": "မြန်မာစာလေ့ကျင့်ခန်းစာအုပ်",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": 1,
+            "baseline_default": false,
+            "expected": 2,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": "အင်္ဂလိပ်စာလေ့ကျင့်ခန်းစာအုပ် ၁အုပ် ၆၀၀၀",
+            "baseline_default": false,
+            "expected": "အင်္ဂလိပ်စာလေ့ကျင့်ခန်းစာအုပ်",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": "ရောက်မှငွေရှင်းမယ်",
+            "baseline_default": false,
+            "expected": "အားလုံးတစ်ခါတည်းပို့ပေးပါ။",
+            "field": "note"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            9000,
+            6000
+          ],
+          "subtotal": 15000,
+          "total": 19000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 2,
+            "fp": 2,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-14",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            4500,
+            6000
+          ],
+          "subtotal": 10500,
+          "total": 14500
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "လှိုင်မြို့နယ်၊ စမ်းသပ်လမ်း၊ အမှတ် ၁၂",
+            "field": "customer.address"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "လှိုင်",
+            "field": "customer.township"
+          },
+          {
+            "actual": "လက်ကိုင်အိတ် အနက်တစ်လုံး",
+            "baseline_default": false,
+            "expected": "လက်ကိုင်အိတ် အနက်",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": "စမ်းချောင်းမဟုတ်တော့ဘူး။ လှိုင်မြို့နယ်၊ စမ်းသပ်လမ်း၊ အမှတ် ၁၂ ကိုပို့ပေးပါ။ ပို့ခကို ပြန်ပြောပေးပါဦး။",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            18000
+          ],
+          "subtotal": 18000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-15",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            18000
+          ],
+          "subtotal": 18000,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "ဖုန်းနံပါတ်ပြင်ပါမယ်။ အရင်နံပါတ်မသုံးတော့ပါ။ ၀၉ ၀၀၀၀ ၀၀၀၀၆ ကိုသုံးပေးပါ။",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-16",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 1,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "09000000005",
+            "baseline_default": false,
+            "expected": "09000000006",
+            "field": "customer.phone"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-17",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-18",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": 1,
+            "baseline_default": false,
+            "expected": null,
+            "field": "items.0.qty"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-19",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": 5000
+        },
+        "valid": true
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            0
+          ],
+          "subtotal": 0,
+          "total": 2000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-20",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            0
+          ],
+          "subtotal": 0,
+          "total": 2000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": "ပတ္တူအိတ် နှစ်လုံးပေါင်း",
+            "baseline_default": false,
+            "expected": "ပတ္တူအိတ်",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": 10000,
+            "baseline_default": false,
+            "expected": null,
+            "field": "items.0.unit_price"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-21",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            20000
+          ],
+          "subtotal": 20000,
+          "total": 21000
+        },
+        "valid": false
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          }
+        },
+        "id": "v2-dev-22",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 2,
+          "phone_errors": 1,
+          "price_errors": 1,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": "09000000009",
+            "baseline_default": false,
+            "expected": null,
+            "field": "customer.phone"
+          },
+          {
+            "actual": 0,
+            "baseline_default": false,
+            "expected": null,
+            "field": "delivery_fee"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-23",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": 5000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": "လိပ်စာ: အမှတ် ၁၂၊ စမ်းသပ်လမ်း",
+            "baseline_default": false,
+            "expected": "အမှတ် ၁၂၊ စမ်းသပ်လမ်း\nလှိုင်မြို့နယ်\nရန်ကုန်",
+            "field": "customer.address"
+          },
+          {
+            "actual": "ပစ္စည်း: ပတ္တူအိတ်",
+            "baseline_default": false,
+            "expected": "ပတ္တူအိတ်",
+            "field": "items.0.product_name"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-24",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": true
+      }
+    ],
+    "control": [
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "Sanchaung Tsp",
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-01",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": "Sanchaung Tsp",
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          },
+          {
+            "actual": "Longyi Set x၂",
+            "baseline_default": false,
+            "expected": "Longyi Set",
+            "field": "items.0.product_name"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-02",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 39000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 3,
+          "phone_errors": 0,
+          "price_errors": 2,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 5,
+          "unsupported_values": 5
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Sample Customer A",
+            "field": "customer.name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 3000,
+            "field": "delivery_fee"
+          },
+          {
+            "actual": "Silk Longyi Set x2",
+            "baseline_default": false,
+            "expected": "Silk Longyi Set",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": "Handbag x1",
+            "baseline_default": false,
+            "expected": "Handbag",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": "Deli",
+            "baseline_default": false,
+            "expected": null,
+            "field": "items.2.product_name"
+          },
+          {
+            "actual": 1,
+            "baseline_default": false,
+            "expected": null,
+            "field": "items.2.qty"
+          },
+          {
+            "actual": 3000,
+            "baseline_default": false,
+            "expected": null,
+            "field": "items.2.unit_price"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            25000
+          ],
+          "subtotal": 61000,
+          "total": 64000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 2,
+            "fp": 3,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-03",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000,
+            25000,
+            3000
+          ],
+          "subtotal": 64000,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            25000
+          ],
+          "subtotal": 61000,
+          "total": 64000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-04",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000,
+            25000
+          ],
+          "subtotal": 61000,
+          "total": 64000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 5,
+          "phone_errors": 0,
+          "price_errors": 3,
+          "quantity_errors": 2,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Silk Longyi Set",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 2,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 18000,
+            "field": "items.0.unit_price"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Handbag",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 1,
+            "field": "items.1.qty"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 25000,
+            "field": "items.1.unit_price"
+          },
+          {
+            "actual": "Silk Longyi Set x2 18000, Handbag x1 25000, Shirt x3 12000",
+            "baseline_default": false,
+            "expected": "Shirt",
+            "field": "items.2.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 12000,
+            "field": "items.2.unit_price"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            25000,
+            36000
+          ],
+          "subtotal": 97000,
+          "total": 100000
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 3,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 2,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 3,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-05",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-06",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "စမ်းသပ်သူ က",
+            "field": "customer.name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Sanchaung",
+            "field": "customer.township"
+          },
+          {
+            "actual": "Dress / အရောင် Black / အရွယ် XL",
+            "baseline_default": false,
+            "expected": "Dress (Black, XL)",
+            "field": "items.0.product_name"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-07",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            50000,
+            18000
+          ],
+          "subtotal": 68000,
+          "total": 71000
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "Mingaladon Tsp",
+            "baseline_default": false,
+            "expected": "Mingaladon",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 40000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-08",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000
+          ],
+          "subtotal": 36000,
+          "total": 40000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "Hlaing",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            36000,
+            75000
+          ],
+          "subtotal": 111000,
+          "total": 116000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-09",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            36000,
+            75000
+          ],
+          "subtotal": 111000,
+          "total": 116000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 3,
+          "unsupported_values": 3
+        },
+        "errors": [
+          {
+            "actual": "မင်မင်",
+            "baseline_default": false,
+            "expected": null,
+            "field": "customer.name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "လှိုင်",
+            "field": "customer.township"
+          },
+          {
+            "actual": "ဂျာကင် အနက်ရောင် L တစ်ထည်ယူမယ်နော်",
+            "baseline_default": false,
+            "expected": "B789 ဂျာကင် အနက်ရောင် L ဆိုဒ်",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 1,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": "လှိုင်မြို့နယ်ကို ပို့ပေးပါ။ ပို့ခဘယ်လောက်လဲ",
+            "baseline_default": false,
+            "expected": null,
+            "field": "note"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            17000
+          ],
+          "subtotal": 17000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-10",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 0
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 2500,
+            "field": "items.0.unit_price"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            7500
+          ],
+          "subtotal": 7500,
+          "total": 9500
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-11",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 3,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 2,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": 0,
+            "baseline_default": false,
+            "expected": null,
+            "field": "delivery_fee"
+          },
+          {
+            "actual": "ချည်သားတီရှပ် M နှစ်ထည်ယူမယ် အဖြူတစ်ထည် အနက်တစ်ထည်",
+            "baseline_default": false,
+            "expected": "ချည်သားတီရှပ် M ဆိုဒ် အဖြူ",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 1,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "ချည်သားတီရှပ် M ဆိုဒ် အနက်",
+            "field": "items.1.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 1,
+            "field": "items.1.qty"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            null,
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 2,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 2,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 2,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-12",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 2,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": 2,
+            "baseline_default": false,
+            "expected": 3,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": 2500,
+            "baseline_default": false,
+            "expected": 7500,
+            "field": "items.0.unit_price"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            22500
+          ],
+          "subtotal": 22500,
+          "total": 22500
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-13",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": 5000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "အားလုံးတစ်ခါတည်းပို့ပေးပါ။",
+            "field": "note"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            9000,
+            6000
+          ],
+          "subtotal": 15000,
+          "total": 19000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 2
+          },
+          "note": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-14",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            9000,
+            6000
+          ],
+          "subtotal": 15000,
+          "total": 19000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 2,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 1,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "လှိုင်မြို့နယ်၊ စမ်းသပ်လမ်း၊ အမှတ် ၁၂",
+            "field": "customer.address"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "လှိုင်",
+            "field": "customer.township"
+          },
+          {
+            "actual": "လက်ကိုင်အိတ် အနက်တစ်လုံး",
+            "baseline_default": false,
+            "expected": "လက်ကိုင်အိတ် အနက်",
+            "field": "items.0.product_name"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 1,
+            "field": "items.0.qty"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": 18000,
+            "field": "items.0.unit_price"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            18000
+          ],
+          "subtotal": 18000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.qty": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-15",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 1,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "၀၉ ၀၀၀၀ ၀၀၀၀၅",
+            "baseline_default": false,
+            "expected": "09000000006",
+            "field": "customer.phone"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-16",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 1,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "09 0000 00005",
+            "baseline_default": false,
+            "expected": "09000000006",
+            "field": "customer.phone"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "customer.phone": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-17",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-18",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-19",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "valid": true
+      },
+      {
+        "complete": true,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            0
+          ],
+          "subtotal": 0,
+          "total": 2000
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-20",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            0
+          ],
+          "subtotal": 0,
+          "total": 2000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 0,
+          "price_errors": 1,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": 10000,
+            "baseline_default": false,
+            "expected": null,
+            "field": "items.0.unit_price"
+          }
+        ],
+        "evidence_valid": true,
+        "expected_totals": {
+          "line_totals": [
+            null
+          ],
+          "subtotal": null,
+          "total": null
+        },
+        "failure": null,
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 1,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-21",
+        "item_count_correct": true,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            20000
+          ],
+          "subtotal": 20000,
+          "total": 21000
+        },
+        "valid": true
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 1,
+          "phone_errors": 1,
+          "price_errors": 0,
+          "quantity_errors": 0
+        },
+        "errors": [
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "09000000007",
+            "field": "customer.phone"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          }
+        },
+        "id": "v2-dev-22",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 2,
+          "phone_errors": 1,
+          "price_errors": 1,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 2,
+          "unsupported_values": 2
+        },
+        "errors": [
+          {
+            "actual": "09000000009",
+            "baseline_default": false,
+            "expected": null,
+            "field": "customer.phone"
+          },
+          {
+            "actual": 0,
+            "baseline_default": false,
+            "expected": null,
+            "field": "delivery_fee"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-23",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": 5000
+        },
+        "valid": false
+      },
+      {
+        "complete": false,
+        "counts": {
+          "critical_errors": 0,
+          "phone_errors": 0,
+          "price_errors": 0,
+          "quantity_errors": 0,
+          "unsupported_nondefault_values": 1,
+          "unsupported_values": 1
+        },
+        "errors": [
+          {
+            "actual": "အမှတ် ၁၂၊ စမ်းသပ်လမ်း",
+            "baseline_default": false,
+            "expected": "အမှတ် ၁၂၊ စမ်းသပ်လမ်း\nလှိုင်မြို့နယ်\nရန်ကုန်",
+            "field": "customer.address"
+          },
+          {
+            "actual": null,
+            "baseline_default": false,
+            "expected": "လှိုင်",
+            "field": "customer.township"
+          }
+        ],
+        "evidence_valid": false,
+        "expected_totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "failure": "invalid_evidence",
+        "fields": {
+          "customer.address": {
+            "fn": 1,
+            "fp": 1,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "customer.name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.phone": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "customer.township": {
+            "fn": 1,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 0
+          },
+          "delivery_fee": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          },
+          "items.product_name": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.qty": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "items.unit_price": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 0,
+            "tp": 1
+          },
+          "note": {
+            "fn": 0,
+            "fp": 0,
+            "missing_correct": 0,
+            "missing_total": 1,
+            "tp": 0
+          }
+        },
+        "id": "v2-dev-24",
+        "item_count_correct": false,
+        "schema_valid": true,
+        "totals": {
+          "line_totals": [
+            5000
+          ],
+          "subtotal": 5000,
+          "total": null
+        },
+        "valid": false
+      }
+    ]
+  },
+  "decision": {
+    "checks": {
+      "at_least_one_improvement": true,
+      "complete_drafts_not_lower": false,
+      "failures_not_higher": true,
+      "phone_errors_not_higher": true,
+      "price_errors_not_higher": true,
+      "quantity_errors_not_higher": true
+    },
+    "pilot_approved": false,
+    "retain_for_further_development": false
+  },
+  "policy": {
+    "label_review_required_before_heldout_freeze": true,
+    "non_regression_metrics": [
+      "phone_errors",
+      "quantity_errors",
+      "price_errors"
+    ],
+    "reference": "control from development-v2-prompt-ab-01",
+    "require_at_least_one_strict_improvement": true,
+    "require_complete_drafts_not_lower": true,
+    "require_failures_not_higher": true,
+    "scope": "Known provisional development cases only; never pilot approval",
+    "stability_measured": false,
+    "version": "contrastive-development-01"
+  },
+  "results": {
+    "contrastive": {
+      "cases": 24,
+      "complete_drafts": 3,
+      "counts": {
+        "critical_errors": 12,
+        "phone_errors": 2,
+        "price_errors": 6,
+        "quantity_errors": 4,
+        "unsupported_nondefault_values": 38,
+        "unsupported_values": 38
+      },
+      "evidence_valid": 17,
+      "failures": 7,
+      "fields": {
+        "customer.address": {
+          "fn": 2,
+          "fp": 2,
+          "missing_correct": 8,
+          "missing_total": 15,
+          "precision": 0.7777777777777778,
+          "recall": 0.7777777777777778,
+          "tp": 7
+        },
+        "customer.name": {
+          "fn": 2,
+          "fp": 2,
+          "missing_correct": 6,
+          "missing_total": 13,
+          "precision": 0.8181818181818182,
+          "recall": 0.8181818181818182,
+          "tp": 9
+        },
+        "customer.phone": {
+          "fn": 1,
+          "fp": 2,
+          "missing_correct": 5,
+          "missing_total": 12,
+          "precision": 0.8461538461538461,
+          "recall": 0.9166666666666666,
+          "tp": 11
+        },
+        "customer.township": {
+          "fn": 7,
+          "fp": 4,
+          "missing_correct": 8,
+          "missing_total": 14,
+          "precision": 0.42857142857142855,
+          "recall": 0.3,
+          "tp": 3
+        },
+        "delivery_fee": {
+          "fn": 0,
+          "fp": 2,
+          "missing_correct": 4,
+          "missing_total": 9,
+          "precision": 0.8823529411764706,
+          "recall": 1.0,
+          "tp": 15
+        },
+        "items.product_name": {
+          "fn": 15,
+          "fp": 14,
+          "missing_correct": 0,
+          "missing_total": 0,
+          "precision": 0.5625,
+          "recall": 0.5454545454545454,
+          "tp": 18
+        },
+        "items.qty": {
+          "fn": 3,
+          "fp": 3,
+          "missing_correct": 0,
+          "missing_total": 1,
+          "precision": 0.90625,
+          "recall": 0.90625,
+          "tp": 29
+        },
+        "items.unit_price": {
+          "fn": 3,
+          "fp": 1,
+          "missing_correct": 0,
+          "missing_total": 3,
+          "precision": 0.9642857142857143,
+          "recall": 0.9,
+          "tp": 27
+        },
+        "note": {
+          "fn": 1,
+          "fp": 8,
+          "missing_correct": 11,
+          "missing_total": 22,
+          "precision": 0.1111111111111111,
+          "recall": 0.5,
+          "tp": 1
+        }
+      },
+      "item_count_correct": 17,
+      "peak_sampled_rss_bytes": 4208640000,
+      "schema_valid": 24,
+      "timed_requests": 24,
+      "warm_latency_p50_ms": 13016.27,
+      "warm_latency_p95_ms": 21409.58
+    },
+    "control": {
+      "cases": 24,
+      "complete_drafts": 4,
+      "counts": {
+        "critical_errors": 23,
+        "phone_errors": 4,
+        "price_errors": 11,
+        "quantity_errors": 8,
+        "unsupported_nondefault_values": 25,
+        "unsupported_values": 25
+      },
+      "evidence_valid": 14,
+      "failures": 10,
+      "fields": {
+        "customer.address": {
+          "fn": 2,
+          "fp": 1,
+          "missing_correct": 8,
+          "missing_total": 15,
+          "precision": 0.875,
+          "recall": 0.7777777777777778,
+          "tp": 7
+        },
+        "customer.name": {
+          "fn": 2,
+          "fp": 1,
+          "missing_correct": 6,
+          "missing_total": 13,
+          "precision": 0.9,
+          "recall": 0.8181818181818182,
+          "tp": 9
+        },
+        "customer.phone": {
+          "fn": 3,
+          "fp": 3,
+          "missing_correct": 6,
+          "missing_total": 12,
+          "precision": 0.75,
+          "recall": 0.75,
+          "tp": 9
+        },
+        "customer.township": {
+          "fn": 9,
+          "fp": 3,
+          "missing_correct": 8,
+          "missing_total": 14,
+          "precision": 0.25,
+          "recall": 0.1,
+          "tp": 1
+        },
+        "delivery_fee": {
+          "fn": 1,
+          "fp": 2,
+          "missing_correct": 1,
+          "missing_total": 9,
+          "precision": 0.875,
+          "recall": 0.9333333333333333,
+          "tp": 14
+        },
+        "items.product_name": {
+          "fn": 11,
+          "fp": 9,
+          "missing_correct": 0,
+          "missing_total": 1,
+          "precision": 0.7096774193548387,
+          "recall": 0.6666666666666666,
+          "tp": 22
+        },
+        "items.qty": {
+          "fn": 7,
+          "fp": 2,
+          "missing_correct": 1,
+          "missing_total": 2,
+          "precision": 0.9259259259259259,
+          "recall": 0.78125,
+          "tp": 25
+        },
+        "items.unit_price": {
+          "fn": 6,
+          "fp": 3,
+          "missing_correct": 0,
+          "missing_total": 4,
+          "precision": 0.8888888888888888,
+          "recall": 0.8,
+          "tp": 24
+        },
+        "note": {
+          "fn": 1,
+          "fp": 1,
+          "missing_correct": 13,
+          "missing_total": 22,
+          "precision": 0.5,
+          "recall": 0.5,
+          "tp": 1
+        }
+      },
+      "item_count_correct": 13,
+      "peak_sampled_rss_bytes": 4488052736,
+      "schema_valid": 24,
+      "timed_requests": 24,
+      "warm_latency_p50_ms": 11760.92,
+      "warm_latency_p95_ms": 18125.95
+    }
+  },
+  "scope": "development-only-provisional; no independent language review or stability repeats",
+  "source_runs": {
+    "contrastive": "40b6133d726f5c054689572fadf3d849d80c74537c739bc202906353291eb5f5",
+    "control": "419695aae32bccabff5d06023297e1730bd731a469fc5552d79df01be00a2bfc"
+  }
+}

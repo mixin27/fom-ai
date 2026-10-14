@@ -1,0 +1,128 @@
+import { HttpException, HttpStatus } from '@nestjs/common';
+
+export interface ErrorDetail {
+  field: string;
+  errors: string[];
+}
+
+type AppHttpExceptionPayload = {
+  code: string;
+  message: string;
+  details?: ErrorDetail[];
+  context?: Record<string, unknown>;
+};
+
+export class AppHttpException extends HttpException {
+  constructor(status: number, payload: AppHttpExceptionPayload) {
+    super(payload, status);
+  }
+}
+
+export function validationError(
+  details: ErrorDetail[],
+  message = 'Invalid request data',
+): AppHttpException {
+  return new AppHttpException(HttpStatus.UNPROCESSABLE_ENTITY, {
+    code: 'VALIDATION_ERROR',
+    message,
+    details,
+  });
+}
+
+export function unauthorizedError(
+  message = 'Authentication required',
+): AppHttpException {
+  return new AppHttpException(HttpStatus.UNAUTHORIZED, {
+    code: 'UNAUTHORIZED',
+    message,
+  });
+}
+
+export function forbiddenError(
+  message = 'You do not have permission to perform this action',
+): AppHttpException {
+  return new AppHttpException(HttpStatus.FORBIDDEN, {
+    code: 'FORBIDDEN',
+    message,
+  });
+}
+
+export function notFoundError(message: string): AppHttpException {
+  return new AppHttpException(HttpStatus.NOT_FOUND, {
+    code: 'NOT_FOUND',
+    message,
+  });
+}
+
+export function conflictError(
+  message: string,
+  context?: Record<string, unknown>,
+): AppHttpException {
+  return new AppHttpException(HttpStatus.CONFLICT, {
+    code: 'CONFLICT',
+    message,
+    ...(context ? { context } : {}),
+  });
+}
+
+export function describeExceptionContext(error: unknown): string {
+  if (!(error instanceof AppHttpException)) {
+    return '';
+  }
+
+  const response = error.getResponse();
+  if (
+    typeof response !== 'object' ||
+    response === null ||
+    !('context' in response) ||
+    response.context === undefined
+  ) {
+    return '';
+  }
+
+  return ` ${JSON.stringify(response.context)}`;
+}
+
+export function goneError(
+  message: string,
+  context?: Record<string, unknown>,
+): AppHttpException {
+  return new AppHttpException(HttpStatus.GONE, {
+    code: 'ACCOUNT_DELETED',
+    message,
+    ...(context ? { context } : {}),
+  });
+}
+
+export function tooManyRequestsError(
+  message = 'Too many requests. Please try again later.',
+  context?: Record<string, unknown>,
+): AppHttpException {
+  return new AppHttpException(HttpStatus.TOO_MANY_REQUESTS, {
+    code: 'TOO_MANY_REQUESTS',
+    message,
+    ...(context ? { context } : {}),
+  });
+}
+
+export function serviceUnavailableError(
+  message = 'Service temporarily unavailable',
+  context?: Record<string, unknown>,
+): AppHttpException {
+  return new AppHttpException(HttpStatus.SERVICE_UNAVAILABLE, {
+    code: 'SERVICE_UNAVAILABLE',
+    message,
+    ...(context ? { context } : {}),
+  });
+}
+
+export function sessionConflictError(
+  message: string,
+  context?: Record<string, unknown>,
+): AppHttpException {
+  return new AppHttpException(HttpStatus.CONFLICT, {
+    code: 'SESSION_ACTIVE_ON_ANOTHER_DEVICE',
+    message,
+    ...(context ? { context } : {}),
+  });
+}

@@ -1,0 +1,43 @@
+name: CI
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  deterministic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 9.15.9
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: pnpm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: tools/ai-evaluation/requirements.txt
+      - run: pnpm install --prod=false --ignore-scripts --frozen-lockfile
+      - run: python -m pip install -r tools/ai-evaluation/requirements.txt
+      - run: python scripts/check_public.py
+      - run: pnpm typecheck
+      - run: pnpm build
+      - run: pnpm test
+      - run: python -m pytest -q
+      - name: Validate datasets and public integrity manifest
+        working-directory: tools/ai-evaluation
+        run: |
+          python -m fom_eval validate
+          python -m development_v2 validate
+          python -m fom_eval freeze

@@ -1,0 +1,252 @@
+{
+  "cases": {
+    "v2-dev-01": {
+      "label_notes": "Price adjacent to Qty is provisionally labeled per-unit under the existing fixture convention; confirm with language/domain review. Identity and street replaced.",
+      "related_v1_families": [
+        "family-01"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-02": {
+      "label_notes": "Compact price follows the existing fixture per-unit convention. Payment claim is excluded, including from note.",
+      "related_v1_families": [
+        "family-02"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-03": {
+      "label_notes": "Unlabeled lines retain customer/address and both items. Compact prices are provisionally per-unit.",
+      "related_v1_families": [
+        "family-03"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-04": {
+      "label_notes": "Join adjacent variant fields to their own product; do not invent an address.",
+      "related_v1_families": [
+        "family-04"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-05": {
+      "label_notes": "Three independent items; compact prices use the provisional per-unit convention.",
+      "related_v1_families": [
+        "family-05"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-06": {
+      "label_notes": "Township is separately stated. Address need not repeat it; prices follow the compact fixture convention.",
+      "related_v1_families": [
+        "family-06",
+        "family-10"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-07": {
+      "label_notes": "Preserve Black/XL wording; payment chatter is excluded.",
+      "related_v1_families": [
+        "family-07"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-08": {
+      "label_notes": "Same template family as case 01; cannot be treated as independent held-out data.",
+      "related_v1_families": [
+        "family-01"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-09": {
+      "label_notes": "Preserve hyphenated product wording. Source identity, phone and building replaced.",
+      "related_v1_families": [
+        "family-04"
+      ],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "user-samples"
+      ]
+    },
+    "v2-dev-10": {
+      "label_notes": "Adapted seller vocabulary. Explicit unit price replaces conversational price question. Township alone is not a complete address. Fee question does not specify a fee.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "meo"
+      ]
+    },
+    "v2-dev-11": {
+      "label_notes": "Quantity is three saleable packs, not twelve pieces. Four-piece content stays in description.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "food"
+      ]
+    },
+    "v2-dev-12": {
+      "label_notes": "Two distinct variants; no explicit per-unit price. Do not divide bundle total. Separately payable delivery is unknown, not zero.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "bundle"
+      ]
+    },
+    "v2-dev-13": {
+      "label_notes": "Explicit correction wins. Weight is not quantity or price. Free delivery means numeric zero.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "food"
+      ]
+    },
+    "v2-dev-14": {
+      "label_notes": "One fee for the order. Deliver-together instruction is a note; payment claim is excluded. Single-copy price applies to the second item.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "books"
+      ]
+    },
+    "v2-dev-15": {
+      "label_notes": "Use only the explicitly corrected address. Fee inquiry is not a price or fulfillment note.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "address"
+      ]
+    },
+    "v2-dev-16": {
+      "label_notes": "Explicit phone replacement retains the leading zero. Phone strings are synthetic placeholders, never copied customer contacts.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-17": {
+      "label_notes": "Same development family as case 16; latest explicit correction replaces old ASCII phone.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-18": {
+      "label_notes": "Two numbers without recipient labels or correction cannot establish a preferred phone.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-19": {
+      "label_notes": "No quantity is stated; do not apply the parser's default of one as an extracted fact.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-20": {
+      "label_notes": "Explicit zero unit price is populated data, not missing.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-21": {
+      "label_notes": "Total alone never becomes a unit price even when division is exact.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-22": {
+      "label_notes": "Explicit call-before-arrival instruction is retained, with original-script evidence for the normalized phone.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-23": {
+      "label_notes": "Instruction text is untrusted content, not a real phone, fee, note or payment field.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    },
+    "v2-dev-24": {
+      "label_notes": "Keep all address lines and separately record the explicitly named township.",
+      "related_v1_families": [],
+      "review_status": "pending-independent-language-review",
+      "source_ids": [
+        "authored"
+      ]
+    }
+  },
+  "dataset_version": "development-v2",
+  "sources": {
+    "address": {
+      "kind": "public-shop-faq",
+      "pattern": "Address corrections and delivery conditions; adapted.",
+      "url": "https://commonhealth.com.mm/my/pages/medicines"
+    },
+    "authored": {
+      "description": "New regression cases informed by v1 failure categories; not independent held-out evidence.",
+      "kind": "authored-synthetic"
+    },
+    "books": {
+      "kind": "public-shop-instructions",
+      "pattern": "Delivery charged per order and payment on arrival; adapted.",
+      "url": "https://www.myanmaronlinesales.com/Default/Home/all"
+    },
+    "bundle": {
+      "kind": "public-seller-post-mirror",
+      "pattern": "Individual and bundle pricing; adapted, not a customer message.",
+      "url": "https://www.beautynailhairsalons.com/MM/Meiktila/107267601707457/April-Queen"
+    },
+    "food": {
+      "kind": "public-seller-post-mirror",
+      "pattern": "Pack contents, package weights and per-pack prices; adapted, not a customer message.",
+      "url": "https://www.findglocal.com/MM/Yangon/103351588081423/ပွဲတော်အုပ်"
+    },
+    "meo": {
+      "kind": "public-seller-post",
+      "pattern": "Product codes, colour and size wording; adapted, not a customer message.",
+      "url": "https://t.me/s/myanmarexportoutlet?before=1686"
+    },
+    "user-samples": {
+      "description": "Nine examples supplied in this conversation; names, phones and street addresses replaced. Not verified real customer chats.",
+      "kind": "user-supplied-format"
+    }
+  },
+  "status": "development-only-provisional"
+}

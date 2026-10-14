@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "runtime": {
+    "release": "b11429",
+    "stable_release": "v0.6.0",
+    "filename": "llama-b11429-bin-macos-arm64.tar.gz",
+    "url": "https://github.com/ggml-org/llama.cpp/releases/download/b11429/llama-b11429-bin-macos-arm64.tar.gz",
+    "sha256": "740288ec6887be94280a5dfa25b5e23a78285cab104519e6c7e218904ee82459",
+    "size": 11971406,
+    "license": "MIT",
+    "executable_sha256": "1bf5602a2be50097c44282a6ecc63234d94ee8f96d39fd45fed6eff4e74b6b41"
+  },
+  "models": {
+    "qwen3-1.7b": {
+      "repository": "unsloth/Qwen3-1.7B-GGUF",
+      "revision": "d7f544eead698dbd1f15126ef60b45a1e1933222",
+      "filename": "Qwen3-1.7B-Q4_K_M.gguf",
+      "sha256": "b139949c5bd74937ad8ed8c8cf3d9ffb1e99c866c823204dc42c0d91fa181897",
+      "size": 1107409472,
+      "license": "Apache-2.0"
+    },
+    "qwen3-4b": {
+      "repository": "unsloth/Qwen3-4B-GGUF",
+      "revision": "22c9fc8a8c7700b76a1789366280a6a5a1ad1120",
+      "filename": "Qwen3-4B-Q4_K_M.gguf",
+      "sha256": "f6f851777709861056efcdad3af01da38b31223a3ba26e61a4f8bf3a2195813a",
+      "size": 2497281312,
+      "license": "Apache-2.0"
+    }
+  }
+}

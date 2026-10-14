@@ -1,0 +1,447 @@
+{
+  "source_repository": "fom-platform",
+  "source_commit": "267837fd4b48b11cf7cae946c0ec933912d542cd",
+  "imported_at": "2026-10-14",
+  "files": {
+    "apps/api/scripts/evaluate-local-ai.ts": {
+      "source_sha256": "f476c22a7932a2272badf6395178f21cd334120f8f1cc6a2ba1da28ff75b6a06",
+      "mode": "unchanged"
+    },
+    "apps/api/scripts/evaluate-order-parser.ts": {
+      "source_sha256": "68444b995c5ed892b0afc83289e1059ea94914945c07a32fb989c8b1e6120ae2",
+      "mode": "unchanged"
+    },
+    "apps/api/scripts/smoke-local-ai.ts": {
+      "source_sha256": "6c809ee85124db9a038ab9ba45b6e8514c1c26b2742fe222ff9c214110a29561",
+      "mode": "unchanged"
+    },
+    "apps/api/src/common/http/app-http.exception.ts": {
+      "source_sha256": "b59434edc057feec2a6afb59a573df3a3635d9629d0858c1110c64ff303f5293",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-address-policy.ts": {
+      "source_sha256": "85356eaf73e8acab11db225cb1baca61418b3f43fd28a8d9e127d1945a52a805",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-conversation-item-policy.spec.ts": {
+      "source_sha256": "5a8c1cec647c6f864ada8fb4f160f831f29fe92920a3c42d7bb362574a8d9654",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-conversation-item-policy.ts": {
+      "source_sha256": "171d4d559cb2d393aafc616f599892502c86db4f7db5cbb86b00f22588ecc802",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-draft.contract.ts": {
+      "source_sha256": "58b534ed3d0796b428820bdf96cbc8ed8d8e816b19373a81a8d7678eaac6aa51",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-draft.service.ts": {
+      "source_sha256": "44cf73dfbdfbb97be144e4d893ab3a9571d8c1ba42d3386d9deb9b6807bde43b",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-draft.spec.ts": {
+      "source_sha256": "44a6d91b8b0405282e06a3369ae864831259623dae8dcbd6484a468cb527995a",
+      "mode": "adapted: omitted FOM controller, authentication and module integration tests; retained contract/transport tests"
+    },
+    "apps/api/src/orders/ai/ai-evaluation.spec.ts": {
+      "source_sha256": "06c6a8c82d65a42c6fcac514bd7d99099ad5a4fc4e197da2ffb179f11fea1299",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-item-policy.spec.ts": {
+      "source_sha256": "a00d6ea9d1686ac55a462b78a488fa9ddacc13d2a9b40442bf3b205b6988de2e",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-item-policy.ts": {
+      "source_sha256": "11a09bdc8848c39cfcdd8fbb407203208bf79beab95db5df13dba55a2f2365af",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-language-policy.spec.ts": {
+      "source_sha256": "15ff15f8bceb62d06c0a0021b0c8f60950f8cd69c3c61a1140c98daec6177ede",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-language-policy.ts": {
+      "source_sha256": "b72a6b56f3c766e5bdda8d446122698d7e6ed5d941d3f5afb47f70c99f885e2f",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-note-policy.ts": {
+      "source_sha256": "8b7d211481f6e2488366dac62e44387e364c90bea53d282f20f848bb05602a64",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-phone-policy.spec.ts": {
+      "source_sha256": "bcd6451ec8d9af71b9d4cab61a827f605eb528325ba79af25d027d353d566873",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/ai/ai-phone-policy.ts": {
+      "source_sha256": "0906cd75bf86c4c48365d58e43c7bac79cf13331ff488bab28d15ae40add55e9",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-message-parser-customer-extractor.ts": {
+      "source_sha256": "2dcf1bf5929d717f61e0128ec401b8c3806935142cdc9a1dc5d7029b6a46b642",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-message-parser-item-extractor.ts": {
+      "source_sha256": "398fe3ed9cdba7317c214270ddfc31d1961c543e63dacd1df32d68d8f90ec36f",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-message-parser-location.ts": {
+      "source_sha256": "95a7fc1295ecd67ab455f96945604aa7ca1c4cc0e471e6c5ecdda418e1faab87",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-message-parser-scoring.ts": {
+      "source_sha256": "c0a715b6732595f6171ea19594286d38e1f661f2571e88af71758be785e9f0a9",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-message-parser.service.spec.ts": {
+      "source_sha256": "b6da7407bc160425f9d284c92c6c8815a5dc70bc54892214a6c8ad43eaa85609",
+      "mode": "adapted: replaced original customer-like contacts with synthetic placeholders"
+    },
+    "apps/api/src/orders/order-message-parser.service.ts": {
+      "source_sha256": "8e3bcfe4828c93f5165eb57c1fab4e888f86bbced0b0bf9b305f8e668b4cce98",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-message-parser.types.ts": {
+      "source_sha256": "0f8e06157a5090fd097c809c6783663dbce99a860756b7ac7605a0ae583dc114",
+      "mode": "unchanged"
+    },
+    "apps/api/src/orders/order-parser-evaluation.spec.ts": {
+      "source_sha256": "45abd2f79dbe7e94ac91aed1d2bc938a0b8225065f62a8fb691cd14d83d00ee2",
+      "mode": "unchanged"
+    },
+    "apps/api/tsconfig.build.json": {
+      "source_sha256": "d4e938a34dd7a8f6d1ec75bdac5fc09a66380e7ae21aeb4c55026f91e6d09f20",
+      "mode": "unchanged"
+    },
+    "apps/api/tsconfig.json": {
+      "source_sha256": "8e755a976490a8c311848a89701feb4472c4b72920f43dd5fa911578d07a6caf",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/.gitignore": {
+      "source_sha256": "3ad98f82ecf384744141b6ef653f6442899ffe79de80121d685d74047030a79b",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/README.md": {
+      "source_sha256": "9b9a0ff0e066acc54e6d4200c7c01c7aec49188d3e4ab26e195ac9f392180e07",
+      "mode": "adapted: standalone/public-port instructions"
+    },
+    "tools/ai-evaluation/artifacts.json": {
+      "source_sha256": "417a4a1de043be3ebb8b9a2c42a4d09e4d8c376039aa606d491d429757c60f66",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/config.json": {
+      "source_sha256": "96facf487ca36a1290134f7f29c1996b23eb89308b29a95ce4573bb39968de34",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/DEVELOPMENT-V2-R1.md": {
+      "source_sha256": "1c5efc0deaf4b27344187d16666a4c5e94eab782f9672eb80670d8e6f8f972ad",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/DEVELOPMENT-V2.md": {
+      "source_sha256": "22d6686dfa532510984bbb3fdf3940c617ec2bb43b7ebeaee52aba2f60ea5840",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/REVIEW-V2.md": {
+      "source_sha256": "17072e9d71194e3f40cd1dc50cba67058ba637eaae83721d82ec190ead3106f8",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/build_synthetic.py": {
+      "source_sha256": "aa5fac542e3e9dc6077abf9f73417132d1dc54c7f2e4e42d93244ea98a888a9e",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/development-v2-r1.jsonl": {
+      "source_sha256": "5a94ffaec7a612c234a74c426dadc9dbdd6aa917aa1d816902237fc8e4446acd",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/development-v2-r1.jsonl.manifest.json": {
+      "source_sha256": "329bce8e647bdc6bf1fe20dd0803daadf1e5218d110bec062d6bb96889591d13",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/development-v2.annotations.json": {
+      "source_sha256": "5a332a72636f9fb71935cf8a182750a55ed95426b5d345a20c9f56fc5f823436",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/development-v2.jsonl": {
+      "source_sha256": "62639b577178c88a249b448e0542d98a4fda4f3af0acdadef220e49da6290ff0",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/datasets/synthetic-v1.jsonl": {
+      "source_sha256": "4ec4c2921d76e21b3a01165554fd73ce202c2da85d5961cf8568828035eaaddc",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/__init__.py": {
+      "source_sha256": "a4a65e4d48813730514c872a6f33f76ef732bd6da03752fd83bd40e512103570",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/__main__.py": {
+      "source_sha256": "45137574be3cb7535d607d9103675cd89b3f37894be48ea5e303e66e86416d4f",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/compare.py": {
+      "source_sha256": "aa3cf4c7570bb804bdb1ca69045ed26ebc900143b765c3a18b951591af88aa41",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/config.json": {
+      "source_sha256": "f376b55775670353e96c20ef6dfa9614caff81eb030b2c033f33fa8ccb54c3f0",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/contrastive/__init__.py": {
+      "source_sha256": "e0c8fcc6e003dc9a63afbffa00c1c6ed250d52f76cd241fd27974c1da58b4674",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/contrastive/__main__.py": {
+      "source_sha256": "d44fa6ae2742d7cf7f512cc899ee1de3be75fab371dc1229347182891a9d060b",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/contrastive/prompt.txt": {
+      "source_sha256": "325df1c83aa6bd7a04f7c3fcea774061c126554b991d9efd65be5de85d6c3ee3",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/contrastive/report.py": {
+      "source_sha256": "91758d17cf7fd8aa64b57ecd4edf8bb2a8e3cce6c4a80b270bdb9e02d82cc2c9",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/contrastive/selection.json": {
+      "source_sha256": "dfbfb0ed763e7f79d98222776afbc6e629a53cbf3b26be4479b919253b5a9b17",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/experiment.py": {
+      "source_sha256": "3b715ed7ea2bb541c68177dc9d0b1ebea93fe6090da347ab9ecfa61179621857",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/prompts/candidate.txt": {
+      "source_sha256": "cb58b42ac524f8956cedd308974871208f455b1f113701c330ebaec776ef20f9",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/prompts/control.txt": {
+      "source_sha256": "ecbd8158d8618788237a31338fc729caf18ed71f60f483d50632106ed2223fca",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/recipes.py": {
+      "source_sha256": "86ca0b80900284c79bc3a486fcdbdca58bfb5bb3fd07e1e2d4cd77a4b600d941",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/development_v2/runtime.py": {
+      "source_sha256": "c1d018a82936864192b6b8780c5b8a86faf8fcc93b7c5d7bb624c7cc43d63a04",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/__init__.py": {
+      "source_sha256": "88535aca8bc41addf66a3eb45adc498a2c90ad9f311fb7efc441840a147c7e2b",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/__main__.py": {
+      "source_sha256": "67ec600c634dc375574e36b437925cf0067d4c092a66037cba50e475c1047f1b",
+      "mode": "adapted: active freeze is frozen-public-v1.json; original frozen-v1.json retained as historical evidence"
+    },
+    "tools/ai-evaluation/fom_eval/artifacts.py": {
+      "source_sha256": "6b66c0423006aed6e853be1a12d369619790936de755b1d0db5896bbf1db405c",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/baseline.py": {
+      "source_sha256": "f1f279ef6833527771dcebda0e139576bda7129400b2bc40a0212ea34294b379",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/contract.py": {
+      "source_sha256": "c7a180fabe54a5ce6eaedf8cd37faec2ec0c3277e9919cd12241bc16385816b5",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/dataset.py": {
+      "source_sha256": "00c812226136d202e4e6d4f16a56ea94d2a260ef95a934a36e3142e91d3a1f4a",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/protocol.py": {
+      "source_sha256": "4f0c3fc40861658757aa32d60b5770b0da0bcb5128bb590f09c8e3b5d274b681",
+      "mode": "adapted: active freeze is frozen-public-v1.json; original frozen-v1.json retained as historical evidence"
+    },
+    "tools/ai-evaluation/fom_eval/report.py": {
+      "source_sha256": "c068a479f91b3cc8ef57d7a9fc8f8aee02ca127f629325ae4bfe8c78ea6c71ad",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/runtime.py": {
+      "source_sha256": "aa43573f4896dc69faa4c9e97dcffa92211a78081b4dda8cbd46a3b8faff5efe",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/fom_eval/scoring.py": {
+      "source_sha256": "9d47ceb0d14d19490607ff3cbc9c76671628d03efc49d5704c0277686ef81c16",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/frozen-v1.json": {
+      "source_sha256": "fc9bc62347504e5618b4cbbd6994f52ee742108ae64f8cf7a1f98a15e64e6fb9",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/label_review/__init__.py": {
+      "source_sha256": "1aeea9b5e1ea3152eb13e44479e8f8387bea2d203702bfeb90356093ab4e0c56",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/label_review/__main__.py": {
+      "source_sha256": "a11461cdded594e2b4032cedcad6d96d7277a85d5f035dd843e871cf975a048c",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/label_review/decisions.json": {
+      "source_sha256": "d7c5dd470e90f238062b077d14f0fce4dc0c00decadda88253900dfabe2d9d67",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/label_review/review.html": {
+      "source_sha256": "ad7a38bbf138e0deb71d277bb74c68d89fd55c1f1aa83427afce93f8cbbd8e2a",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/prompt.txt": {
+      "source_sha256": "ecbd8158d8618788237a31338fc729caf18ed71f60f483d50632106ed2223fca",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/prototype_eval/README.md": {
+      "source_sha256": "4af0068a710caffce569bc2326007fbef6080f613a6150254b2f7290a6525d73",
+      "mode": "adapted: standalone/public-port instructions"
+    },
+    "tools/ai-evaluation/prototype_eval/__init__.py": {
+      "source_sha256": "07b05fe87280eba59f0f1cfd7c960e728b724b165bbd16a2b7a24d3b85c7d903",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/prototype_eval/__main__.py": {
+      "source_sha256": "c36065c5e9bf2121fb57938098fb3d8085f6f56f6ccf0c4393ce86b4647b3d17",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/CONTRASTIVE-DEVELOPMENT-DECISION.md": {
+      "source_sha256": "1fe338d18acb7fb184fde2fb0dece4bdb9f2bb9ef8f14a32850d93605ebbd196",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/CONVERSATIONAL-ITEMS-DECISION.md": {
+      "source_sha256": "67121617e926c581f21df0ba3f76b6a557bd4f235bb1e61729a64dbf4383cc7e",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/DECISION.md": {
+      "source_sha256": "e58e153c446e0df567601d727caf40e269fc778da5a0c479e4b255dd2123e1a2",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/DEVELOPMENT-V2-DECISION.md": {
+      "source_sha256": "7458f085577360cfed313ca2249b8e756e28d4fe901b91b9fa883a5b9c363677",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/ITEM-MAP-DECISION.md": {
+      "source_sha256": "a7b522c9a5b551cf8e3b47d3df8e9b4380e916c867c932744c463d6dbb76c9d3",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/LANGUAGE-SOURCE-DECISION.md": {
+      "source_sha256": "b6703743c6b1f87990af67f5762940817ae90fe7c117afb7e0d53b62427ecc5f",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/PHONE-CONSTRAINTS-DECISION.md": {
+      "source_sha256": "10691b0860e32f358fadf2e93307c75c74db39e59410ac6fefcc6f629aa6ef4c",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/PROTOTYPE-DEVELOPMENT-DECISION.md": {
+      "source_sha256": "2efa35e85fa9ac7c89dab9b652f4d0056511065294bce38b3cf67e4247703a94",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/development-v2-contrastive.json": {
+      "source_sha256": "21e72ac3d5635f92157a419211c6af4bdeae3cbe4b840e658ba294d1fadc5b1f",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/development-v2-contrastive.md": {
+      "source_sha256": "acfe19a7be3566d827742d51275a1f1968ab78590bbe51d546958eb309175190",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/development-v2-prompt-ab.json": {
+      "source_sha256": "e1863c4dc3ac036725575cfd6af3ecd6b20ca42d1d276a5259c4054d108e5f5d",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/development-v2-prompt-ab.md": {
+      "source_sha256": "9681c48a8a17bc7cb40e7467ccdf3ce8fb77a698ab3eae02750cdc21da68a977",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/development-v2-r1-review.html": {
+      "source_sha256": "52b56f8847ce41f0ae73a0e2f04fa38a42bdb360e1711b2bca645eea81db565a",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/environment.json": {
+      "source_sha256": "ef3f47b92cd9e3a91f72156decad73fdfde68680bd730c211f0d30d0471fc625",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-conversation-items-v1.json": {
+      "source_sha256": "e67d3b013da0379127eded97e7415c0b58b79bc2694efcdd1176739a439b3a8c",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-conversation-items-v1.md": {
+      "source_sha256": "bcbbcabdfec88de62a114fa79f8fc17d7c486c6c34a90c185beda0273d5abab5",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-development-v1.json": {
+      "source_sha256": "fb4a46d7ccc61b8811ada2e0f86b007c5975c080fbfa4fa707c900e5a51865fc",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-development-v1.md": {
+      "source_sha256": "b147427568d8a9be0c5dc6cf5a7e53ec8430c4715ff91466db2e3edf6e9893db",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-item-map-v1.json": {
+      "source_sha256": "dfab1ca2035031574a66287cebe4f5ae2350608e0236ca843e810ede9cc3ea0c",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-item-map-v1.md": {
+      "source_sha256": "e768b1249967bb6a0e69cbe7b4371a8c3e0a7f6eaf442c6e815d127d30e78d3b",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-language-sources-v1.json": {
+      "source_sha256": "f2addb99e06991fc739196160e31a6054e3aaf1d2e7660aac7bb143b5ec536a6",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-language-sources-v1.md": {
+      "source_sha256": "3d00928f95c8cf475e6b38da50bbc7c8817277df6120dd3a4dfaa176452197cc",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-phone-constraints-v1.json": {
+      "source_sha256": "162578afe3c1bc19d27616d21a683529221eb341e350b9c5e1f76d87401aaf15",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/prototype-phone-constraints-v1.md": {
+      "source_sha256": "dd09045b4bec3182d89a533558aa1b6ae5fa64c23d01aec8837875af7f084997",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/synthetic-v1.json": {
+      "source_sha256": "6edb62db55ae1acc2f601b0ad7da8bd9429c2408c2863a2b5d7a740896601af7",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/reports/synthetic-v1.md": {
+      "source_sha256": "2756b3213209d4b9f1a02ea7972ed7189a9cfcab3bd85b6e3a76c80816ac21e8",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/requirements.txt": {
+      "source_sha256": "cdde95d4fda4a6a1360c6bf4f6fbd107781c75745e104fe8e142e5a3886018e0",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/schema.json": {
+      "source_sha256": "6083439242b831b5ba3cfe0999d97139f2e90097bd5f32473d467ca24c295809",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/tests/test_contrastive_experiment.py": {
+      "source_sha256": "9d03f8cd72f002fbd67de3088b0926091c57953ee7401fc808ff185fd880cfe2",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/tests/test_development_experiment.py": {
+      "source_sha256": "b5e6b3642bc9541f58aebedae077abcb4308825e90b62136fab397163344355a",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/tests/test_development_v2.py": {
+      "source_sha256": "a5f105912a2432a8f9ee97de9799f1dbfaecd9609df384d16c680d596222f548",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/tests/test_evaluation.py": {
+      "source_sha256": "ff34e3a230bb508aace185e705284de54528c5fa5405a6670aadf6d7ed9eb503",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/tests/test_label_review.py": {
+      "source_sha256": "e7c02de369f4a2303bba6cd425345d080552d7f7561d49296c06adb20ba89317",
+      "mode": "unchanged"
+    },
+    "tools/ai-evaluation/tests/test_prototype_evaluation.py": {
+      "source_sha256": "f66e1c1170f5758c39e391b1424307f0a96283dfe97f11219bbe3a9c9221937f",
+      "mode": "unchanged"
+    },
+    "tools/ai-prototype/README.md": {
+      "source_sha256": "3fcb6231f2a134ebb999290d3b6e9fe1a8a994d20404fd338df423046329882e",
+      "mode": "adapted: standalone/public-port instructions"
+    },
+    "tools/ai-prototype/serve.py": {
+      "source_sha256": "cf6939690c92834d698f3fbd1c6202568d748e3c4942fba0494f55d85098528d",
+      "mode": "unchanged"
+    }
+  }
+}

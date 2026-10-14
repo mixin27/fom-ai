@@ -1,0 +1,42 @@
+{
+  "name": "api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Standalone extraction library and CLI; historical workspace name retained for evaluation compatibility",
+  "license": "MIT",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit --incremental false",
+    "test": "jest --runInBand",
+    "extract": "ts-node --transpile-only scripts/evaluate-local-ai.ts",
+    "baseline": "ts-node --transpile-only scripts/evaluate-order-parser.ts"
+  },
+  "dependencies": {
+    "@nestjs/common": "11.1.18",
+    "reflect-metadata": "0.2.2",
+    "rxjs": "7.8.2"
+  },
+  "devDependencies": {
+    "@types/jest": "30.0.0",
+    "@types/node": "22.19.17",
+    "jest": "30.3.0",
+    "ts-jest": "29.4.9",
+    "ts-node": "10.9.2",
+    "typescript": "5.9.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "testEnvironment": "node"
+  }
+}

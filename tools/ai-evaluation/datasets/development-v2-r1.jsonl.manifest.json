@@ -1,0 +1,104 @@
+{
+  "changes": [
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-01",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-02",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-03",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-04",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-05",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 12000,
+      "case_id": "v2-dev-05",
+      "decision_id": "unqualified-price",
+      "field": "items.2.unit_price"
+    },
+    {
+      "after": null,
+      "before": 25000,
+      "case_id": "v2-dev-06",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 25000,
+      "case_id": "v2-dev-07",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-08",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    },
+    {
+      "after": null,
+      "before": 18000,
+      "case_id": "v2-dev-09",
+      "decision_id": "unqualified-price",
+      "field": "items.0.unit_price"
+    }
+  ],
+  "dataset_sha256": "5a94ffaec7a612c234a74c426dadc9dbdd6aa917aa1d816902237fc8e4446acd",
+  "policies": {
+    "allowed_use": "Development only; new labels do not revise historical scores or approve a pilot",
+    "authority": "User answers in this conversation; not independent language review",
+    "decisions": [
+      {
+        "answer": "It depends on the shop or message",
+        "id": "unqualified-price",
+        "question": "For supplied Qty: 2 / Price: 18,000 or Longyi x2 18000 formats, is the amount consistently a unit price?",
+        "rule": "When quantity exceeds one and no explicit per-unit or total meaning is stated, unit_price stays null with an ambiguity label. Keep a price attached to exactly one item: unit and line amount are identical without division. Do not infer a missing quantity or divide totals."
+      },
+      {
+        "answer": "Only use the corrected field",
+        "id": "correction-note",
+        "question": "Should correction text also be kept in the note after correcting the field?",
+        "rule": "Apply phone/address corrections to the field without copying correction text into note. Keep separately stated fulfillment instructions."
+      }
+    ],
+    "independent_language_review_complete": false,
+    "recorded_on": "2026-10-11",
+    "township_alias_review_complete": false,
+    "version": "development-v2-r1"
+  },
+  "source": {
+    "annotations_sha256": "5a332a72636f9fb71935cf8a182750a55ed95426b5d345a20c9f56fc5f823436",
+    "dataset_sha256": "62639b577178c88a249b448e0542d98a4fda4f3af0acdadef220e49da6290ff0",
+    "decisions_sha256": "d7c5dd470e90f238062b077d14f0fce4dc0c00decadda88253900dfabe2d9d67"
+  },
+  "status": "user-informed-provisional; independent-language-review-pending",
+  "version": "development-v2-r1"
+}

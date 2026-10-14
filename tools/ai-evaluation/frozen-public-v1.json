@@ -1,0 +1,29 @@
+{
+  "files": {
+    "apps/api/scripts/evaluate-order-parser.ts": "68444b995c5ed892b0afc83289e1059ea94914945c07a32fb989c8b1e6120ae2",
+    "apps/api/src/orders/order-message-parser-customer-extractor.ts": "2dcf1bf5929d717f61e0128ec401b8c3806935142cdc9a1dc5d7029b6a46b642",
+    "apps/api/src/orders/order-message-parser-item-extractor.ts": "398fe3ed9cdba7317c214270ddfc31d1961c543e63dacd1df32d68d8f90ec36f",
+    "apps/api/src/orders/order-message-parser-location.ts": "95a7fc1295ecd67ab455f96945604aa7ca1c4cc0e471e6c5ecdda418e1faab87",
+    "apps/api/src/orders/order-message-parser-scoring.ts": "c0a715b6732595f6171ea19594286d38e1f661f2571e88af71758be785e9f0a9",
+    "apps/api/src/orders/order-message-parser.service.spec.ts": "89532dff3d469cdaf4464524fa2fd99bcb2b78043e520e68ad9beaf0e1c874af",
+    "apps/api/src/orders/order-message-parser.service.ts": "8e3bcfe4828c93f5165eb57c1fab4e888f86bbced0b0bf9b305f8e668b4cce98",
+    "apps/api/src/orders/order-message-parser.types.ts": "0f8e06157a5090fd097c809c6783663dbce99a860756b7ac7605a0ae583dc114",
+    "tools/ai-evaluation/artifacts.json": "417a4a1de043be3ebb8b9a2c42a4d09e4d8c376039aa606d491d429757c60f66",
+    "tools/ai-evaluation/config.json": "96facf487ca36a1290134f7f29c1996b23eb89308b29a95ce4573bb39968de34",
+    "tools/ai-evaluation/datasets/synthetic-v1.jsonl": "4ec4c2921d76e21b3a01165554fd73ce202c2da85d5961cf8568828035eaaddc",
+    "tools/ai-evaluation/fom_eval/__init__.py": "88535aca8bc41addf66a3eb45adc498a2c90ad9f311fb7efc441840a147c7e2b",
+    "tools/ai-evaluation/fom_eval/__main__.py": "8b7d432834a3bb7c996696c912cf744d12e2c51ba7a8c096c4d241f7c0de9090",
+    "tools/ai-evaluation/fom_eval/artifacts.py": "6b66c0423006aed6e853be1a12d369619790936de755b1d0db5896bbf1db405c",
+    "tools/ai-evaluation/fom_eval/baseline.py": "f1f279ef6833527771dcebda0e139576bda7129400b2bc40a0212ea34294b379",
+    "tools/ai-evaluation/fom_eval/contract.py": "c7a180fabe54a5ce6eaedf8cd37faec2ec0c3277e9919cd12241bc16385816b5",
+    "tools/ai-evaluation/fom_eval/dataset.py": "00c812226136d202e4e6d4f16a56ea94d2a260ef95a934a36e3142e91d3a1f4a",
+    "tools/ai-evaluation/fom_eval/protocol.py": "1b04f28edbb870efd3ad417b2464dd361b9e7361f63cc213d26e584b0f9e7b55",
+    "tools/ai-evaluation/fom_eval/report.py": "c068a479f91b3cc8ef57d7a9fc8f8aee02ca127f629325ae4bfe8c78ea6c71ad",
+    "tools/ai-evaluation/fom_eval/runtime.py": "aa43573f4896dc69faa4c9e97dcffa92211a78081b4dda8cbd46a3b8faff5efe",
+    "tools/ai-evaluation/fom_eval/scoring.py": "9d47ceb0d14d19490607ff3cbc9c76671628d03efc49d5704c0277686ef81c16",
+    "tools/ai-evaluation/prompt.txt": "ecbd8158d8618788237a31338fc729caf18ed71f60f483d50632106ed2223fca",
+    "tools/ai-evaluation/requirements.txt": "cdde95d4fda4a6a1360c6bf4f6fbd107781c75745e104fe8e142e5a3886018e0",
+    "tools/ai-evaluation/schema.json": "6083439242b831b5ba3cfe0999d97139f2e90097bd5f32473d467ca24c295809"
+  },
+  "schema_sha256": "f96f4f99da453c0fa4e7b54cf0e2e8e6ede5eb2817e378036965aeedbdef2343"
+}
