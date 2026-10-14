@@ -77,3 +77,7 @@ The [item-map follow-up](../reports/ITEM-MAP-DECISION.md) measures source-constr
 The [Myanmar quantity/address follow-up](../reports/LANGUAGE-SOURCE-DECISION.md) extends finite source constraints for quantity wording, colour allocations, address continuation and notes. It records development regressions as well as final results.
 
 The [conversational item follow-up](../reports/CONVERSATIONAL-ITEMS-DECISION.md) measures complete single-product messages, preserved package descriptions and validated quantity-correction sequences.
+
+## Dedicated repository baseline
+
+The [first standalone run](../reports/PUBLIC-PORT-DECISION.md) measures this repository at commit `24a7b73`, with its own lockfile and public integrity manifest. It preserves all previous scored case outcomes in this one development run. The generated report's historical “web prototype” wording refers to the copied extraction service, not a live portal request.

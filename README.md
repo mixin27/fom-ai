@@ -74,7 +74,7 @@ python -m prototype_eval run --output "$HOME/.cache/fom-ai-evaluation/runs/publi
 
 The current development evaluator measures both the copied parser and this repository's extraction service. Models are not trained or updated. It records failures without retries or fallback and shuts down its owned model process afterward. See [evaluation instructions](tools/ai-evaluation/README.md) and [migration/provenance](docs/migration.md).
 
-Historical scores were measured in FOM Platform, not in this repository. The most recent imported development run had 17/24 complete drafts and two rejected requests; it is a small reused development set, not a production quality claim. A new run must have a new fingerprint/output directory. Published benchmark cases cannot be treated as fresh unseen evidence after tuning.
+The [first standalone development run](tools/ai-evaluation/reports/PUBLIC-PORT-DECISION.md) measured this repository at commit `24a7b73`: **17/24 complete drafts, two rejected requests, and nine critical-field errors**. Its scored case outcomes match the last imported FOM Platform run. This is a small reused development set, not a production quality claim or new accuracy improvement. Historical reports remain tied to their original source versions. A new run must have a new fingerprint/output directory. Published benchmark cases cannot be treated as fresh unseen evidence after tuning.
 
 ## Repository map
 

@@ -14,3 +14,9 @@ Verified locally on 14 October 2026, with Node 24.21.0, pnpm 9.15.9 and Python 3
 - Public-content guard and known original-contact scan: passed. These are limited checks, not a guarantee of detecting every secret or personal detail.
 
 No model downloads, new real-inference comparison, production database access, deployment, remote publication or GitHub settings changes were performed for this import. Historical accuracy/timing figures remain historical. A new measured comparison is separate follow-up work.
+
+## Standalone inference follow-up
+
+After the initial import, the 14 October 2026 run from commit `24a7b73` measured both extractors on all 24 known development cases, with two excluded model warmups. Model results: 17 complete drafts, two rejected requests, nine critical-field errors. The scored case outcomes match the imported source-application run. Report regeneration verified its matching source protocol. The runtime was stopped and raw artifacts remain outside Git.
+
+See the [standalone decision](../tools/ai-evaluation/reports/PUBLIC-PORT-DECISION.md) for aggregate reports, limits and reproduction commands. No extraction implementation or FOM Platform integration changed in this follow-up.
