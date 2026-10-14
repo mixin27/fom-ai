@@ -14,7 +14,7 @@
     "baseline": "ts-node --transpile-only scripts/evaluate-order-parser.ts"
   },
   "dependencies": {
-    "@nestjs/common": "11.1.18",
+    "@nestjs/common": "12.1.2",
     "reflect-metadata": "0.2.2",
     "rxjs": "7.8.2"
   },
