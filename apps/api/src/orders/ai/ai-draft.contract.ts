@@ -1,3 +1,4 @@
+import { aiConversationItem } from './ai-conversation-item-policy';
 import { aiNoteFact } from './ai-note-policy';
 import { aiAddressFacts } from './ai-address-policy';
 import {
@@ -265,6 +266,14 @@ export function buildAiDraftSchema(message: string) {
   const lines = aiSourceLines(message);
   const itemMap = aiSourceItems(message);
   const addressFacts = aiAddressFacts(message);
+  // The complete conversational grammar accounts for every line: product,
+  // price, optional quantity correction and closed ancillary instructions.
+  // With only a township destination it contains no customer name or street.
+  const townshipOnlyCustomer = !!(
+    addressFacts.township &&
+    !addressFacts.address &&
+    aiConversationItem(message)
+  );
   const noteFact = aiNoteFact(message);
   const phonePolicy = analyzeAiPhoneSource(message);
   const phones = phonePolicy.allowedPhones;
@@ -293,14 +302,16 @@ export function buildAiDraftSchema(message: string) {
           : { type: 'string', const: noteFact.value }
         : text(),
       customer: object({
-        name: text(),
+        name: townshipOnlyCustomer ? { type: 'null' } : text(),
         phone: { ...text(40), enum: [null, ...phones] },
         township: addressFacts.township
           ? { type: 'string', const: addressFacts.township.value }
           : text(),
         address: addressFacts.address
           ? { type: 'string', const: addressFacts.address.value }
-          : text(),
+          : townshipOnlyCustomer
+            ? { type: 'null' }
+            : text(),
       }),
       items: {
         type: 'array',

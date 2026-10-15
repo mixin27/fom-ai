@@ -37,6 +37,22 @@ The existing FOM web flow remains in FOM Platform. This initial repository impor
 
 The next integration should use a versioned boundary with parity tests. A future service additionally needs authentication, bounded concurrency, cancellation, safe diagnostics, deployment support and capacity evaluation. Those are not supplied by today's CLI. Do not expose the current loopback runtime publicly.
 
+## Explicit township policy
+
+The current source rules additionally recognize a numbered unlabelled address with an explicit township marker and supported city ending, and narrow English/Myanmar delivery instructions. They constrain only the township and its exact original line. Street names such as “Township Road,” competing markers, recognized conditional/correction wording and separate address/township fields prevent the new constraint.
+
+For a fully recognized single-product conversation where every line has a known role and the destination contains only a township, the output schema requires absent customer name and full address to remain null. Additional identity/address/unknown lines disable this absence rule. This is source-derived schema construction, not training, post-generation repair or a general ability to prove information absent from arbitrary messages.
+
+See the [measured decision](../tools/ai-evaluation/reports/TOWNSHIP-ONLY-DECISION.md) for the initial regression, final comparison and remaining limits.
+
+## Compact slash-separated items
+
+The item source policy recognizes complete rows such as `Product Cup / Color Blue / Qty 2 / Unit price 1000`, including supported Myanmar labels and digit quantities. Slashes inside parentheses or product names such as `AC/DC` stay literal. Each mapped item carries its own original line references; the schema and validator prevent missing items, crossed references and changed numeric values.
+
+The map is used only when every line has a supported role. Duplicate fields, ambiguous alternatives, unknown lines, mixed incomplete formats and recognized corrections decline this new constraint. Missing values stay null, zero stays zero, and an unqualified amount for multiple units remains unknown. This is a finite source policy, not model training or a repair after generation.
+
+The [measured result](../tools/ai-evaluation/reports/COMPACT-SLASH-DECISION.md) improves item/numeric coverage but leaves customer-label/township and payment-note errors in the target message. Do not interpret a successful response as confirmation that every field is correct.
+
 ## Evaluation versus application
 
 The Python `fom_eval` package retains the original benchmark algorithm. `prototype_eval` calls the current TypeScript extraction service. These have different prompts/output handling, so their scores are not interchangeable. The rule parser is a baseline, never ground truth.

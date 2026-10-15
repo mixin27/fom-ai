@@ -20,3 +20,19 @@ No model downloads, new real-inference comparison, production database access, d
 After the initial import, the 14 October 2026 run from commit `24a7b73` measured both extractors on all 24 known development cases, with two excluded model warmups. Model results: 17 complete drafts, two rejected requests, nine critical-field errors. The scored case outcomes match the imported source-application run. Report regeneration verified its matching source protocol. The runtime was stopped and raw artifacts remain outside Git.
 
 See the [standalone decision](../tools/ai-evaluation/reports/PUBLIC-PORT-DECISION.md) for aggregate reports, limits and reproduction commands. No extraction implementation or FOM Platform integration changed in this follow-up.
+
+## Explicit-township follow-up
+
+The next batch passed 188 TypeScript tests, 70 Python tests, typecheck, build and the public-content check. It adds 41 tests relative to the 147-test import, including narrow destination formats, false positives, exact evidence and absent-field behavior.
+
+The first model attempt improved to 18/24 but introduced an incorrect name/address in the Myanmar township-only case. That diagnostic is retained. The follow-up schema constraint was measured in a new run, reaching 19/24 with no new scored case regressions against the standalone baseline. Two rejected requests and nine critical-field errors remain. Report regeneration verified the final source fingerprint; raw artifacts remain outside Git and the owned runtime stopped.
+
+See [the final decision](../tools/ai-evaluation/reports/TOWNSHIP-ONLY-DECISION.md). FOM Platform was not modified or integrated in this batch.
+
+## Compact slash-item follow-up
+
+Verified on 15 October 2026: typecheck, build, 231 TypeScript tests, 70 Python tests and public-content checks passed. The documented ignored Python 3.12 `.venv` was recreated with the same pinned requirements after the old temporary environment lost package files.
+
+The real model comparison on all 24 known cases has 19 complete drafts, one rejected request and four critical-field errors. The compact-format case now has correct items and numeric fields but still fails customer-name/address/township and note checks. All other scored case outcomes are unchanged. This is partial progress, not a completed fix for every field in that message.
+
+Report regeneration verified the source fingerprint and the owned inference runtime stopped. Only aggregate results are tracked; raw artifacts remain outside Git. See [the measured decision](../tools/ai-evaluation/reports/COMPACT-SLASH-DECISION.md). FOM Platform remains unchanged.

@@ -76,6 +76,10 @@ The current development evaluator measures both the copied parser and this repos
 
 The [first standalone development run](tools/ai-evaluation/reports/PUBLIC-PORT-DECISION.md) measured this repository at commit `24a7b73`: **17/24 complete drafts, two rejected requests, and nine critical-field errors**. Its scored case outcomes match the last imported FOM Platform run. This is a small reused development set, not a production quality claim or new accuracy improvement. Historical reports remain tied to their original source versions. A new run must have a new fingerprint/output directory. Published benchmark cases cannot be treated as fresh unseen evidence after tuning.
 
+The [explicit-township follow-up](tools/ai-evaluation/reports/TOWNSHIP-ONLY-DECISION.md) improves the same known development set to **19/24 complete drafts**, with two rejected requests and nine critical-field errors unchanged. It recognizes narrow explicit destination formats and keeps absent identity/full-address fields null only for fully accounted-for single-product conversations. An initial regression and its separately measured correction are preserved in the reports. This is development evidence, not independent production validation.
+
+The [compact slash-item follow-up](tools/ai-evaluation/reports/COMPACT-SLASH-DECISION.md) reduces rejected requests from two to one and critical-field errors from nine to four. Complete drafts remain **19/24**: the targeted example now has correct items/numbers but still misinterprets customer labels, township and payment text. These remaining errors are explicitly retained in the report.
+
 ## Repository map
 
 | Location | Purpose |

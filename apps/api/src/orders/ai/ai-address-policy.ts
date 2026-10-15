@@ -15,7 +15,7 @@ function township(value: string): string | undefined {
   return name && !/[0-9၀-၉]/.test(name) ? name : undefined;
 }
 
-export function aiAddressFacts(message: string): AiAddressFacts {
+function labelledAddressFacts(message: string): AiAddressFacts {
   const lines = message.split(/\r?\n/);
   // Corrections, conflicting destinations and conditional addresses need a
   // conversational decision; never freeze an earlier labelled address.
@@ -70,4 +70,42 @@ export function aiAddressFacts(message: string): AiAddressFacts {
         }
       : {}),
   };
+}
+
+/** Extend only explicit, single-destination formats. Unknown place names and
+ * conversational corrections stay on the model/review path. */
+export function aiAddressFacts(message: string): AiAddressFacts {
+  const labelled = labelledAddressFacts(message);
+  if (Object.keys(labelled).length) return labelled;
+  const lines = message.split(/\r?\n/);
+  // Do not salvage a partially understood labelled address, or compete with a
+  // separate township field. Preserve the existing completeness policy.
+  if (lines.some((line) => /^(?:address|township|လိပ်စာ|မြို့နယ်)(?:\s|[:：])/i.test(line.trim())))
+    return {};
+  // An exact fee-only question does not make the destination conditional. No
+  // other question, correction, negation or alternative is ignored.
+  const destinationText = message.replace(/ပို့ခဘယ်လောက်လဲ[။?？]?/g, '');
+  if (/\b(?:correct|correction|instead|change|if|unless|or|not|maybe)\b|ပြောင်း|ပြင်|မဟုတ်|ဆိုရင်|သို့မဟုတ်|မပို့|လား|[?？]/i.test(destinationText))
+    return {};
+  const markedLines = lines.flatMap((line, i) =>
+    /\b(?:Tsp|Township)\b|မြို့နယ်/i.test(line) ? [i] : [],
+  );
+  if (markedLines.length !== 1) return {};
+  const index = markedLines[0];
+  const line = lines[index].trim();
+  // A second delivery/address statement may conflict even without a marker.
+  if (lines.some((other, i) => i !== index &&
+    /\b(?:address|destination|deliver|send)\b|လိပ်စာ|ကို\s*ပို့|အမှတ်|^\s*No\.?\s*\d/i.test(other)))
+    return {};
+  const myanmar = /^([\u1000-\u109F ]{1,80})မြို့နယ်ကို\s*ပို့ပေးပါ[။.!]?(?:\s*ပို့ခဘယ်လောက်လဲ[။?？]?)?$/.exec(line);
+  const english = /^(?:deliver|send) to ([A-Za-z][A-Za-z .'-]{0,79}) (?:Tsp|Township)[.!]?$/i.exec(line);
+  let name = myanmar?.[1].trim() ?? english?.[1].trim();
+  // A complete unlabelled street line must have a numbered street, explicit
+  // township marker and supported city ending. Infer only the township field.
+  if (!name && /^(?:No\.?\s*[0-9]+|အမှတ်\s*[0-9၀-၉]+)[^:：!?？\n]*[,၊]\s*(?:Yangon|Mandalay|ရန်ကုန်(?:မြို့)?|မန္တလေး(?:မြို့)?)[။.]?$/i.test(line)
+      && (line.match(/[,၊]/g)?.length ?? 0) >= 2)
+    name = /[,၊]\s*([^,၊\n:：]+?)\s*(?:\bTsp\b|\bTownship\b|မြို့နယ်)\s*[,၊]/i.exec(line)?.[1].trim();
+  if (!name || /[0-9၀-၉]/.test(name) || (line.match(/\b(?:Tsp|Township)\b|မြို့နယ်/gi)?.length ?? 0) !== 1)
+    return {};
+  return { township: { value: name, lines: [index + 1] } };
 }

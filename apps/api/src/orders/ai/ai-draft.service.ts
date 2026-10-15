@@ -110,7 +110,7 @@ export class AiDraftService {
       };
       const itemMap = aiSourceItems(message);
       const addressFacts = aiAddressFacts(message);
-      const hasAddressFacts = !!addressFacts.address;
+      const hasAddressFacts = !!(addressFacts.address || addressFacts.township);
       const noteFact = aiNoteFact(message);
       const lines = aiSourceLines(message).map((text, index) => ({
         line: index + 1,

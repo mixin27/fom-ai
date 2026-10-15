@@ -310,6 +310,24 @@ describe('local inference transport', () => {
     expect(body.response_format.type).toBe('json_schema');
     expect(body.chat_template_kwargs.enable_thinking).toBe(false);
   });
+  it('passes township-only source facts through prompt, schema and evidence validation', async () => {
+    const source = 'Product: Bag\nQty: 1\nUnit price: 1000\nSend to Sample Township.';
+    const wire = wireFixture();
+    Object.assign(wire.draft.customer, { phone: null, township: 'Sample' });
+    wire.draft.items = [];
+    Object.assign(wire.draft, { delivery_fee: null });
+    wire.sources.customer.phone = [];
+    wire.sources.customer.township = [4];
+    wire.sources.delivery_fee = [];
+    mockResponse(wire);
+    const result = await new AiDraftService().extract(source);
+    expect(result.draft.customer.township).toBe('Sample');
+    const body = JSON.parse(fetchMock.mock.calls[2][1]!.body as string);
+    const input = JSON.parse(body.messages[1].content);
+    expect(input.address_facts).toEqual({ township: { value: 'Sample', lines: [4] } });
+    expect(body.messages[0].content).toContain('address_facts');
+    expect(result.evidence).toEqual([{ field: 'customer.township', quote: 'Send to Sample Township.' }]);
+  });
   it.each([
     ['not json', 'stop'],
     [wireFixture(), 'length'],

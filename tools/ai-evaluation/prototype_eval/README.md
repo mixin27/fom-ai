@@ -81,3 +81,7 @@ The [conversational item follow-up](../reports/CONVERSATIONAL-ITEMS-DECISION.md)
 ## Dedicated repository baseline
 
 The [first standalone run](../reports/PUBLIC-PORT-DECISION.md) measures this repository at commit `24a7b73`, with its own lockfile and public integrity manifest. It preserves all previous scored case outcomes in this one development run. The generated report's historical “web prototype” wording refers to the copied extraction service, not a live portal request.
+
+The [explicit-township follow-up](../reports/TOWNSHIP-ONLY-DECISION.md) records the next standalone source-policy iteration, including the initial regression and final 19/24 comparison. Its exact code hashes differ from the standalone baseline; regenerate each historical report only against its matching source revision.
+
+The [compact slash-item follow-up](../reports/COMPACT-SLASH-DECISION.md) records 19/24 complete drafts, one rejection and four critical-field errors. It improves item/numeric evidence in the targeted format without fixing its remaining customer and note errors. Exact fingerprints and all remaining mismatches are preserved in the companion reports.
