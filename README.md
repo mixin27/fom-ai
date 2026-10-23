@@ -2,7 +2,7 @@
 
 Local order-message extraction for Myanmar, English, and mixed-language commerce messages. FOM AI combines a pretrained Qwen model, explicit source constraints, validation, and reproducible evaluations to produce **drafts for human review**.
 
-**Status: experimental, local development only.** This is not a trained FOM model, a general conversational agent, or a production order-processing service. It never creates orders. Known extraction errors remain; a valid schema does not guarantee a correct interpretation.
+**Status: experimental, development and gated service packaging.** This is not a trained FOM model, a general conversational agent, or a production order-processing service. It never creates orders. Known extraction errors remain; a valid schema does not guarantee a correct interpretation.
 
 ## What is included
 
@@ -80,6 +80,12 @@ The [explicit-township follow-up](tools/ai-evaluation/reports/TOWNSHIP-ONLY-DECI
 
 The [compact slash-item follow-up](tools/ai-evaluation/reports/COMPACT-SLASH-DECISION.md) reduces rejected requests from two to one and critical-field errors from nine to four. Complete drafts remain **19/24**: the targeted example now has correct items/numbers but still misinterprets customer labels, township and payment text. These remaining errors are explicitly retained in the report.
 
+## HTTP service and containers
+
+An authenticated, versioned HTTP boundary now packages this same extraction code for FOM Platform. It supports native Mac development, a private same-host Docker network, or a separate HTTPS service origin. Production customer access remains off by default and requires explicit pilot/shop gates in FOM Platform.
+
+Start with the [service deployment runbook](docs/service-deployment.md). It includes secrets, health checks, bounded concurrency, cancellation, GHCR build instructions, model verification and rollback. This packaging is not a new accuracy result or approval to run the model on the current 4 GiB application Droplet.
+
 ## Repository map
 
 | Location | Purpose |
@@ -91,11 +97,11 @@ The [compact slash-item follow-up](tools/ai-evaluation/reports/COMPACT-SLASH-DEC
 | `tools/ai-prototype/serve.py` | Owned loopback model launcher |
 | `docs` | Architecture, migration and maintainer guidance |
 
-The historical `apps/api` path and workspace name `api` preserve evaluation compatibility. It contains **no FOM API server, controller, authentication, database, web app or mobile app**. `@nestjs/common` is retained for the existing service decorator/error types; Nest is never bootstrapped. `pnpm build` also produces an experimental local library at `apps/api/dist/src/index.js`. It is not published to npm.
+The historical `apps/api` path and workspace name `api` preserve evaluation compatibility. It contains no FOM application server, tenant controller, database, web app or mobile app. An opt-in authenticated extraction HTTP wrapper now lives in `apps/api/src/service`. `@nestjs/common` is retained for the existing service decorator/error types; Nest is never bootstrapped. `pnpm build` also produces an experimental local library at `apps/api/dist/src/index.js`. It is not published to npm.
 
 ## Relationship to FOM Platform
 
-Future extraction development belongs here. FOM Platform currently retains its existing extraction implementation and review UI; it does not automatically consume changes from this repository. Both can use the same pinned local model launcher, one at a time. A later versioned library/service integration must retain FOM's authentication, tenant isolation, entitlements, customer rules, audit, and explicit order confirmation. See [architecture](docs/ai-current-implementation.md).
+Future extraction development belongs here. FOM Platform currently retains its existing extraction implementation and review UI; it does not automatically consume changes from this repository. The opt-in service client in FOM Platform now consumes this boundary; its default legacy development path still uses its own copy. The integration retains FOM's authentication, tenant isolation, entitlements, customer rules, audit, and explicit order confirmation. See [architecture](docs/ai-current-implementation.md).
 
 ## Contributing and license
 

@@ -1,0 +1,22 @@
+FROM ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55 AS build
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates git cmake ninja-build build-essential && rm -rf /var/lib/apt/lists/*
+WORKDIR /src
+# b11429, matching the Mac evaluation runtime's source release.
+RUN git init && git remote add origin https://github.com/ggml-org/llama.cpp.git \
+    && git fetch --depth 1 origin d81235049384534c167caea52b85a694f6103d14 \
+    && git checkout --detach FETCH_HEAD \
+    && test "$(git rev-parse HEAD)" = d81235049384534c167caea52b85a694f6103d14
+RUN cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DGGML_NATIVE=OFF \
+    -DBUILD_SHARED_LIBS=OFF -DLLAMA_BUILD_TESTS=OFF -DLLAMA_BUILD_EXAMPLES=OFF \
+    -DLLAMA_BUILD_SERVER=ON -DLLAMA_CURL=OFF \
+    && cmake --build build --target llama-server --parallel 2
+
+FROM ubuntu:24.04@sha256:534baea6a22c03a63003dbc8dbe78fe34bc0d7e595d9a9dc9834884ff530eb55
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates libgomp1 \
+    && rm -rf /var/lib/apt/lists/* && useradd --uid 10001 --no-create-home inference
+COPY --from=build /src/build/bin/llama-server /usr/local/bin/llama-server
+COPY --from=build /src/LICENSE /usr/share/doc/llama.cpp/LICENSE
+COPY ops/start-inference.sh /usr/local/bin/start-inference
+USER 10001:10001
+EXPOSE 8080
+ENTRYPOINT ["/bin/sh", "/usr/local/bin/start-inference"]

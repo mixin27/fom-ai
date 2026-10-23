@@ -43,8 +43,11 @@ function responseObject(value: unknown): Record<string, unknown> {
 export class AiDraftService {
   private busy = false;
 
-  async extract(message: string) {
-    const origin = localAiOrigin();
+  async extract(
+    message: string,
+    transport?: { origin: string; token?: string; signal?: AbortSignal },
+  ) {
+    const origin = transport?.origin ?? localAiOrigin();
     if (
       typeof message !== 'string' ||
       message.trim().length < 5 ||
@@ -62,6 +65,9 @@ export class AiDraftService {
     this.busy = true;
     const controller = new AbortController();
     const timer = setTimeout(() => controller.abort(), 60000);
+    const signal = transport?.signal
+      ? AbortSignal.any([controller.signal, transport.signal])
+      : controller.signal;
     const start = Date.now();
     try {
       const post = async (path: string, body: unknown) => {
@@ -69,13 +75,18 @@ export class AiDraftService {
         try {
           response = await fetch(`${origin}${path}`, {
             method: 'POST',
-            headers: { 'content-type': 'application/json' },
+            headers: {
+              'content-type': 'application/json',
+              ...(transport?.token
+                ? { authorization: `Bearer ${transport.token}` }
+                : {}),
+            },
             body: JSON.stringify(body),
-            signal: controller.signal,
+            signal,
             redirect: 'error',
           });
         } catch (error) {
-          if (controller.signal.aborted) throw error;
+          if (signal.aborted) throw error;
           throw new AppHttpException(503, {
             code: 'AI_LOCAL_CONNECTION_FAILED',
             message: `Local extraction failed: cannot connect to the inference server at ${origin}. Keep the model launcher open, copy its current FOM_AI_LOCAL_URL and restart the API with that value. The port changes each launch. No order was created.`,
@@ -235,7 +246,7 @@ export class AiDraftService {
             'incomplete_output',
           ].includes(error.message));
       throw serviceUnavailableError(
-        controller.signal.aborted
+        signal.aborted
           ? 'Local extraction exceeded 60 seconds. No order was created.'
           : invalidOutput
             ? 'Local extraction failed validation: the model returned invalid JSON, incomplete fields or unsupported source evidence. Review the message or use the existing parser. No order was created.'

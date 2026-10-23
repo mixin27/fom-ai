@@ -1,0 +1,59 @@
+# Explicit CPU rehearsal only. Do not enable on the existing 4 GiB Droplet.
+name: fom-ai
+services:
+  fom-ai:
+    profiles: [ai]
+    image: ${FOM_AI_IMAGE:-fom-ai:local}
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    environment:
+      FOM_AI_SERVICE_ENABLED: ${FOM_AI_SERVICE_ENABLED:-false}
+      FOM_AI_SERVICE_TOKEN_FILE: /run/secrets/service-token
+      FOM_AI_INFERENCE_URL: http://inference:8080
+      FOM_AI_ALLOW_PRIVATE_HTTP: "true"
+    secrets:
+      - service-token
+    depends_on: [inference]
+    ports:
+      - "127.0.0.1:${FOM_AI_HOST_PORT:-8081}:8081"
+    networks: [inference, access]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 512m
+    cpus: 1
+    init: true
+    stop_grace_period: 15s
+    logging: { driver: local, options: { max-size: 10m, max-file: "3" } }
+  inference:
+    profiles: [ai]
+    image: ${FOM_AI_RUNTIME_IMAGE:-fom-ai-llama:local}
+    build:
+      context: ..
+      dockerfile: Dockerfile.llama
+    environment:
+      FOM_AI_THREADS: "2"
+    volumes:
+      - ${FOM_AI_MODEL_DIR:?Set the absolute path containing verified model weights}:/models:ro
+    networks: [inference]
+    read_only: true
+    tmpfs: [/tmp]
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    mem_limit: 6g
+    cpus: 2
+    init: true
+    stop_grace_period: 15s
+    # Runtime stdout may include diagnostics. Do not persist it; the wrapper's
+    # health/status and sanitized API errors are the supported diagnostics.
+    logging: { driver: none }
+secrets:
+  service-token:
+    file: ${FOM_AI_SERVICE_TOKEN_FILE:?Set the absolute path to a service token file}
+networks:
+  inference:
+    internal: true
+  access:
+    name: fom-ai-access

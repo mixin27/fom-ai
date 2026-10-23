@@ -1,0 +1,72 @@
+name: Container images
+on:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: Publish reviewed images to GHCR (main only; does not deploy)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  checks:
+    uses: ./.github/workflows/ci.yml
+  image:
+    needs: checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    permissions:
+      contents: read
+      packages: write
+    strategy:
+      matrix:
+        include:
+          - name: fom-ai
+            file: Dockerfile
+          - name: fom-ai-llama
+            file: Dockerfile.llama
+    steps:
+      - uses: actions/checkout@v4
+        with: { persist-credentials: false }
+      - uses: docker/setup-buildx-action@v3
+      - name: Lowercase owner
+        id: image
+        env:
+          OWNER: ${{ github.repository_owner }}
+        run: echo "owner=${OWNER,,}" >> "$GITHUB_OUTPUT"
+      - uses: docker/login-action@v3
+        if: github.event_name == 'workflow_dispatch' && inputs.publish && github.ref == 'refs/heads/main'
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ${{ matrix.file }}
+          platforms: linux/amd64
+          push: false
+          load: true
+          tags: ghcr.io/${{ steps.image.outputs.owner }}/${{ matrix.name }}:${{ github.sha }}
+          cache-from: type=gha,scope=${{ matrix.name }}
+          cache-to: type=gha,mode=max,scope=${{ matrix.name }}
+          provenance: false
+          sbom: false
+      - name: Service image smoke
+        if: matrix.name == 'fom-ai'
+        run: python3 scripts/smoke_service.py --image ghcr.io/${{ steps.image.outputs.owner }}/${{ matrix.name }}:${{ github.sha }}
+      - name: Runtime executable smoke
+        if: matrix.name == 'fom-ai-llama'
+        run: docker run --rm --entrypoint /usr/local/bin/llama-server ghcr.io/${{ steps.image.outputs.owner }}/${{ matrix.name }}:${{ github.sha }} --version
+      - uses: docker/build-push-action@v6
+        if: github.event_name == 'workflow_dispatch' && inputs.publish && github.ref == 'refs/heads/main'
+        with:
+          context: .
+          file: ${{ matrix.file }}
+          platforms: linux/amd64
+          push: true
+          tags: ghcr.io/${{ steps.image.outputs.owner }}/${{ matrix.name }}:${{ github.sha }}
+          cache-from: type=gha,scope=${{ matrix.name }}
+          provenance: mode=max
+          sbom: true

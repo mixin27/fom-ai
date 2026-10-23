@@ -33,9 +33,9 @@ flowchart LR
 | Dataset review, scoring and experiments | Customer matching/restoration |
 | Drafts, evidence and warnings | Review UI, order writes, audit and outbox |
 
-The existing FOM web flow remains in FOM Platform. This initial repository import does not change its dependency or redirect its requests. Starting this repository's launcher prints a loopback URL that the existing development API can use, but the API still executes its own copy of extraction code.
+The existing FOM web flow remains in FOM Platform. The initial import did not redirect its requests; the subsequent service integration is explicit opt-in. In legacy local mode, the API connects to the model launcher's loopback URL and executes its own extraction copy. In service mode, it calls the FOM AI wrapper, which executes this repository's implementation.
 
-The next integration should use a versioned boundary with parity tests. A future service additionally needs authentication, bounded concurrency, cancellation, safe diagnostics, deployment support and capacity evaluation. Those are not supplied by today's CLI. Do not expose the current loopback runtime publicly.
+The opt-in HTTP boundary now supplies service authentication, one-request concurrency, cancellation, sanitized diagnostics and container packaging. FOM Platform has a gated client for it. See [service deployment](service-deployment.md). Capacity evaluation, independent extraction review and customer rollout remain separate gates; never expose the model runtime publicly.
 
 ## Explicit township policy
 

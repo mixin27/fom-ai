@@ -36,3 +36,14 @@ Verified on 15 October 2026: typecheck, build, 231 TypeScript tests, 70 Python t
 The real model comparison on all 24 known cases has 19 complete drafts, one rejected request and four critical-field errors. The compact-format case now has correct items and numeric fields but still fails customer-name/address/township and note checks. All other scored case outcomes are unchanged. This is partial progress, not a completed fix for every field in that message.
 
 Report regeneration verified the source fingerprint and the owned inference runtime stopped. Only aggregate results are tracked; raw artifacts remain outside Git. See [the measured decision](../tools/ai-evaluation/reports/COMPACT-SLASH-DECISION.md). FOM Platform remains unchanged.
+
+## Service packaging verification — 23 October 2026
+
+- FOM AI typecheck/build, 237 TypeScript tests and 70 Python tests passed. Public-content guard and diff checks passed.
+- Authenticated HTTP tests cover enabled/disabled gates, media/body limits, source-compatible responses, readiness, busy rejection, client disconnect cancellation and sanitized failures. The actual extractor runs against an HTTP inference stub in deterministic tests.
+- The final service image built on Linux ARM64 in Docker Desktop and passed a synthetic container smoke: authenticated readiness, rejected bad token, successful extraction and oversized message rejection. The smoke test now mirrors the access/private-network separation; the initial single internal-network test failed before extraction because Docker did not publish its port. Temporary containers/networks were removed.
+- The pinned Linux ARM64 CPU runtime built successfully and reports revision d812350. It rejects an invalid weight checksum before inference. No model weights or raw messages were baked into either image.
+- AI Compose syntax and the FOM production network overlay passed validation. The latter used temporary empty environment files because local production secrets are intentionally absent. No production files were created or loaded.
+- FOM Platform's 43 focused API tests (including module/access guards and service-client checks), four web tests, production API typecheck and web typecheck passed. A touched AI test helper's existing payload type was corrected. Full API typecheck still reports four pre-existing `customer`/`never` errors in `orders-support.service.spec.ts` at lines 96, 101, 126 and 136; those were not suppressed.
+
+No GHCR publication, remote CI execution, Linux AMD64 verification, Droplet deployment or production enablement was performed. No new real-model accuracy run was performed for packaging; the 19/24 result belongs to the preceding extraction commit, not a container benchmark. The CPU image has not yet been measured under a real workload on the target host. The manual image workflow runs deterministic checks and container smoke checks before optional publication.

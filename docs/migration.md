@@ -24,3 +24,7 @@ With both checkouts next to one another, run `pnpm check:platform -- ../fom-plat
 ## Publication
 
 The repository owner selected MIT for the imported FOM-owned code and new contributions. This does not relicense FOM Platform as a whole or any upstream dependency, downloaded model/runtime, or referenced external content. No remote publication or visibility changes are performed by this import. Follow the [maintainer checklist](maintainers.md) when publishing.
+
+## Service-boundary follow-up
+
+After the initial import, an opt-in HTTP wrapper and gated FOM Platform client were added. Service mode uses this repository's extraction code; the default legacy local path still uses FOM Platform's copy. The initial import statements above describe that earlier delivery. See [service deployment](service-deployment.md) for the current contract and rollout boundary. Byte-for-byte source parity is no longer expected after deliberate standalone extraction changes; compatibility is checked at the versioned response boundary.

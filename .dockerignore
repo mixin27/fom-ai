@@ -1,0 +1,16 @@
+**
+!package.json
+!pnpm-lock.yaml
+!pnpm-workspace.yaml
+!apps/
+!apps/api/
+!apps/api/package.json
+!apps/api/tsconfig*.json
+!apps/api/src/
+!apps/api/src/**
+!apps/api/scripts/
+!apps/api/scripts/**
+!ops/
+!ops/start-inference.sh
+!LICENSE
+!THIRD_PARTY_NOTICES.md
