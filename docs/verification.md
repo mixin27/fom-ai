@@ -47,3 +47,9 @@ Report regeneration verified the source fingerprint and the owned inference runt
 - FOM Platform's 43 focused API tests (including module/access guards and service-client checks), four web tests, production API typecheck and web typecheck passed. A touched AI test helper's existing payload type was corrected. Full API typecheck still reports four pre-existing `customer`/`never` errors in `orders-support.service.spec.ts` at lines 96, 101, 126 and 136; those were not suppressed.
 
 No GHCR publication, remote CI execution, Linux AMD64 verification, Droplet deployment or production enablement was performed. No new real-model accuracy run was performed for packaging; the 19/24 result belongs to the preceding extraction commit, not a container benchmark. The CPU image has not yet been measured under a real workload on the target host. The manual image workflow runs deterministic checks and container smoke checks before optional publication.
+
+## Multiline-address variant follow-up — 23 October 2026
+
+Added 13 regression checks and a narrow item-map change: recognized address continuation lines no longer discard labelled variant constraints. Typecheck/build, 250 TypeScript tests, 70 Python tests and the public-content guard passed. The first regression run reproduced the omission before the source fix.
+
+The full 24-case real-model run preserves the preceding per-case outcomes (19 complete, one rejection, four critical-field errors). Report regeneration verified its source fingerprint. A separate strengthened five-case service/client/form-adapter check passed, including the missing Myanmar white/L variant, with no database or order writes. Test-owned model/service processes stopped and temporary secrets were removed. Browser automation remained disabled; no new browser result is claimed. See [the decision report](../tools/ai-evaluation/reports/MULTILINE-VARIANTS-DECISION.md) for exact scope, timings, hashes and remaining work.

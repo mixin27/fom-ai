@@ -1,3 +1,4 @@
+import { aiAddressFacts } from './ai-address-policy';
 import { aiConversationItem } from './ai-conversation-item-policy';
 import {
   aiQuantity,
@@ -72,6 +73,11 @@ export function aiSourceItems(message: string): AiSourceItem[] | null {
   if (slashItems) return slashItems;
   const variants = freeformVariants(message);
   if (variants) return variants;
+  // Only lines already recognized as part of the single labelled address may
+  // bypass item parsing. Keep original indices and never skip arbitrary text.
+  const addressContinuations = new Set(
+    aiAddressFacts(message).address?.lines.slice(1) ?? [],
+  );
   const result: AiSourceItem[] = [];
   let active:
     | (AiSourceItem & {
@@ -88,7 +94,15 @@ export function aiSourceItems(message: string): AiSourceItem[] | null {
   for (const [index, raw] of message.split(/\r?\n/).entries()) {
     if (!raw.trim()) continue;
     const labelled = /^([^:：]+)[:：]\s*(.+)$/.exec(raw.trim());
-    if (!labelled) return null;
+    if (!labelled) {
+      if (
+        !addressContinuations.has(index + 1) ||
+        /\b(?:or|and|not|maybe|unless)\b|သို့မဟုတ်|မဟုတ်|ဆိုရင်|[?？]/i.test(raw)
+      )
+        return null;
+      active = null;
+      continue;
+    }
     const label = labelled[1].trim().toLowerCase(),
       value = labelled[2].trim(),
       line = index + 1;

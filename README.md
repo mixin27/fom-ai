@@ -80,6 +80,8 @@ The [explicit-township follow-up](tools/ai-evaluation/reports/TOWNSHIP-ONLY-DECI
 
 The [compact slash-item follow-up](tools/ai-evaluation/reports/COMPACT-SLASH-DECISION.md) reduces rejected requests from two to one and critical-field errors from nine to four. Complete drafts remain **19/24**: the targeted example now has correct items/numbers but still misinterprets customer labels, township and payment text. These remaining errors are explicitly retained in the report.
 
+The [multiline-address variant follow-up](tools/ai-evaluation/reports/MULTILINE-VARIANTS-DECISION.md) preserves separately labelled Myanmar color/size values when the message includes a recognized address continuation. The real platform client and form adapter retain the white/L variant. The existing 24-case scored outcomes remain unchanged at 19/24 complete, one rejection and four critical-field errors; the browser reproduction was checked separately.
+
 ## HTTP service and containers
 
 An authenticated, versioned HTTP boundary now packages this same extraction code for FOM Platform. It supports native Mac development, a private same-host Docker network, or a separate HTTPS service origin. Production customer access remains off by default and requires explicit pilot/shop gates in FOM Platform.

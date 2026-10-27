@@ -13,6 +13,8 @@
 
 - Authenticated HTTP boundary, gated FOM client integration, CPU/app container builds and a [deployment runbook](docs/service-deployment.md); production rollout remains disabled by default.
 
+- [Multiline-address variant follow-up](tools/ai-evaluation/reports/MULTILINE-VARIANTS-DECISION.md): retain labelled color/size and exact evidence beside recognized address continuation lines; verified through the FOM client/form adapter, with unchanged 24-case regression outcomes.
+
 ## Next
 
 1. Address colonless customer labels/township boundaries, payment versus fulfillment notes, conversational corrections and the remaining numeric-evidence rejection without weakening evidence checks. Review the unmarked-township policy separately; do not guess from the final address word.
