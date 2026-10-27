@@ -53,3 +53,11 @@ No GHCR publication, remote CI execution, Linux AMD64 verification, Droplet depl
 Added 13 regression checks and a narrow item-map change: recognized address continuation lines no longer discard labelled variant constraints. Typecheck/build, 250 TypeScript tests, 70 Python tests and the public-content guard passed. The first regression run reproduced the omission before the source fix.
 
 The full 24-case real-model run preserves the preceding per-case outcomes (19 complete, one rejection, four critical-field errors). Report regeneration verified its source fingerprint. A separate strengthened five-case service/client/form-adapter check passed, including the missing Myanmar white/L variant, with no database or order writes. Test-owned model/service processes stopped and temporary secrets were removed. Browser automation remained disabled; no new browser result is claimed. See [the decision report](../tools/ai-evaluation/reports/MULTILINE-VARIANTS-DECISION.md) for exact scope, timings, hashes and remaining work.
+
+## Colonless-customer follow-up — 23–24 October 2026
+
+Typecheck/build, 269 TypeScript tests, 71 Python tests and the public-content guard passed. Nineteen new regression/transport tests cover narrowly recognized colonless customer labels, explicit township boundaries, exact source evidence and payment-only versus fulfillment notes. The new policy participates in current-run fingerprints.
+
+The 23 October real-model comparison improved from 19/24 to 20/24 complete drafts: only the targeted compact Myanmar customer's fields and note changed their scored outcome. One rejection and four critical-field errors remain. Report regeneration verified the source protocol; historical reports and frozen manifests remain unchanged.
+
+On 24 October, all six actual platform client/service/model/form-adapter synthetic checks passed, including the new exact customer/note assertions and previous Myanmar white/L variant. Platform production API typecheck passed. Test-owned services stopped and temporary secrets/logs were removed; no database or order write occurred. No new browser verification, target-host measurement or production enablement is claimed. See [the decision](../tools/ai-evaluation/reports/COLONLESS-CUSTOMER-DECISION.md) for timings, fingerprints and remaining work.

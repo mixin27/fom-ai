@@ -1,3 +1,4 @@
+import { aiCustomerNameFact } from './ai-customer-policy';
 import { aiAddressFacts } from './ai-address-policy';
 import { aiNoteFact } from './ai-note-policy';
 import { Injectable } from '@nestjs/common';
@@ -123,6 +124,7 @@ export class AiDraftService {
       const addressFacts = aiAddressFacts(message);
       const hasAddressFacts = !!(addressFacts.address || addressFacts.township);
       const noteFact = aiNoteFact(message);
+      const nameFact = aiCustomerNameFact(message);
       const lines = aiSourceLines(message).map((text, index) => ({
         line: index + 1,
         text,
@@ -133,6 +135,9 @@ export class AiDraftService {
           content:
             aiDraftPrompt +
             (itemMap ? aiItemMapPrompt : '') +
+            (nameFact
+              ? '\nThe customer_name_fact is the value of one recognized name label. Copy its value and cite its original line; the label itself is not part of the name.'
+              : '') +
             (hasAddressFacts
               ? '\nThe address_facts are source-derived constraints. Copy their values exactly and cite all their lines. Do not omit continuation lines.'
               : '') +
@@ -143,9 +148,10 @@ export class AiDraftService {
         {
           role: 'user',
           content: JSON.stringify(
-            itemMap || hasAddressFacts || noteFact
+            itemMap || hasAddressFacts || noteFact || nameFact
               ? {
                   lines,
+                  ...(nameFact ? { customer_name_fact: nameFact } : {}),
                   ...(noteFact ? { note_fact: noteFact } : {}),
                   ...(itemMap ? { item_map: itemMap } : {}),
                   ...(hasAddressFacts ? { address_facts: addressFacts } : {}),

@@ -119,3 +119,8 @@ def test_malformed_adapter_output_is_a_failure_without_echoing_output(monkeypatc
     row = extract(cases()[0], 'http://127.0.0.1:1234')
     assert row['error'] == 'runner_protocol_error'
     assert 'private' not in json.dumps(row)
+
+
+def test_customer_constraints_are_included_in_current_source_fingerprint():
+    from prototype_eval.__main__ import protocol
+    assert 'apps/api/src/orders/ai/ai-customer-policy.ts' in protocol()['current']

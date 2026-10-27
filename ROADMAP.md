@@ -15,9 +15,11 @@
 
 - [Multiline-address variant follow-up](tools/ai-evaluation/reports/MULTILINE-VARIANTS-DECISION.md): retain labelled color/size and exact evidence beside recognized address continuation lines; verified through the FOM client/form adapter, with unchanged 24-case regression outcomes.
 
+- [Colonless-customer follow-up](tools/ai-evaluation/reports/COLONLESS-CUSTOMER-DECISION.md): 20/24 complete drafts; narrowly supported customer labels, explicit township boundaries and payment-only note handling. One rejection and four critical-field errors remain.
+
 ## Next
 
-1. Address colonless customer labels/township boundaries, payment versus fulfillment notes, conversational corrections and the remaining numeric-evidence rejection without weakening evidence checks. Review the unmarked-township policy separately; do not guess from the final address word.
+1. Address the remaining free-form payment versus fulfillment notes, conversational corrections and numeric-evidence rejection without weakening evidence checks. Review the unmarked-township policy separately; do not guess from the final address word.
 2. Obtain independent Myanmar-language review and voluntarily supplied, anonymized representative messages outside Git.
 3. Freeze a candidate and acceptance criteria, then measure fresh held-out families and stability repeats.
 4. Qualify the versioned service boundary on target hardware and reviewed cases before customer rollout or removing FOM's legacy local path.

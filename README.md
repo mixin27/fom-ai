@@ -82,6 +82,8 @@ The [compact slash-item follow-up](tools/ai-evaluation/reports/COMPACT-SLASH-DEC
 
 The [multiline-address variant follow-up](tools/ai-evaluation/reports/MULTILINE-VARIANTS-DECISION.md) preserves separately labelled Myanmar color/size values when the message includes a recognized address continuation. The real platform client and form adapter retain the white/L variant. The existing 24-case scored outcomes remain unchanged at 19/24 complete, one rejection and four critical-field errors; the browser reproduction was checked separately.
 
+The [colonless-customer follow-up](tools/ai-evaluation/reports/COLONLESS-CUSTOMER-DECISION.md) improves the same known development set to **20/24**, with one rejection and four critical-field errors unchanged. The targeted customer name/address/township and payment-only note now match. Four known cases still fail; this is not held-out quality or production approval.
+
 ## HTTP service and containers
 
 An authenticated, versioned HTTP boundary now packages this same extraction code for FOM Platform. It supports native Mac development, a private same-host Docker network, or a separate HTTPS service origin. Production customer access remains off by default and requires explicit pilot/shop gates in FOM Platform.

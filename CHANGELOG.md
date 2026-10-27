@@ -2,6 +2,8 @@
 
 ## Unreleased
 
+- Recognize narrowly supported colonless customer labels and explicit township boundaries; exclude payment-only statements only when other lines are accounted for. Added 19 regression/transport tests and policy fingerprint coverage. The measured known-development result improves from 19/24 to 20/24; one rejection and four critical-field errors remain.
+
 - Preserve labelled color/size variants beside recognized multiline addresses. The item map keeps exact source references, rejects ambiguous continuations and does not skip unknown text. Added 13 regression checks; the platform smoke now checks the previously omitted Myanmar white/L variant.
 
 - Added the opt-in authenticated v1 extraction HTTP wrapper, bounded requests, cancellation, health checks, pinned app/CPU runtime container builds, manual GHCR publication workflow and deployment guidance. FOM Platform has a gated service client; customer rollout and target-host performance qualification remain pending.

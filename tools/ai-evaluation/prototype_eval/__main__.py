@@ -46,6 +46,7 @@ def protocol():
              REPO / 'apps/api/src/orders/ai/ai-conversation-item-policy.ts',
              REPO / 'apps/api/src/orders/ai/ai-language-policy.ts',
              REPO / 'apps/api/src/orders/ai/ai-address-policy.ts',
+             REPO / 'apps/api/src/orders/ai/ai-customer-policy.ts',
              REPO / 'apps/api/src/orders/ai/ai-note-policy.ts',
              REPO / 'apps/api/src/common/http/app-http.exception.ts']
     paths += sorted(HERE.glob('*.py'))

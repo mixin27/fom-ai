@@ -1,3 +1,4 @@
+import { aiCustomerNameFact } from './ai-customer-policy';
 import { aiConversationItem } from './ai-conversation-item-policy';
 import { aiNoteFact } from './ai-note-policy';
 import { aiAddressFacts } from './ai-address-policy';
@@ -275,6 +276,7 @@ export function buildAiDraftSchema(message: string) {
     aiConversationItem(message)
   );
   const noteFact = aiNoteFact(message);
+  const nameFact = aiCustomerNameFact(message);
   const phonePolicy = analyzeAiPhoneSource(message);
   const phones = phonePolicy.allowedPhones;
   const references = lines.flatMap((line, index) =>
@@ -302,7 +304,11 @@ export function buildAiDraftSchema(message: string) {
           : { type: 'string', const: noteFact.value }
         : text(),
       customer: object({
-        name: townshipOnlyCustomer ? { type: 'null' } : text(),
+        name: nameFact
+          ? { type: 'string', const: nameFact.value }
+          : townshipOnlyCustomer
+            ? { type: 'null' }
+            : text(),
         phone: { ...text(40), enum: [null, ...phones] },
         township: addressFacts.township
           ? { type: 'string', const: addressFacts.township.value }
@@ -360,7 +366,14 @@ export function buildAiDraftSchema(message: string) {
     }),
     sources: object({
       customer: object({
-        name: refs,
+        name: nameFact
+          ? {
+              ...refs,
+              minItems: 1,
+              maxItems: 1,
+              items: { ...refs.items, enum: nameFact.lines },
+            }
+          : refs,
         phone:
           phonePolicy.status === 'corrected'
             ? {

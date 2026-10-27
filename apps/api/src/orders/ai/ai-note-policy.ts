@@ -1,3 +1,6 @@
+import { aiCustomerNameFact } from './ai-customer-policy';
+import { aiAddressFacts } from './ai-address-policy';
+import { aiSourceItems } from './ai-item-policy';
 import { analyzeAiPhoneSource } from './ai-phone-policy';
 
 export type AiNoteFact = { value: string | null; lines: number[] };
@@ -12,6 +15,12 @@ export function aiNoteFact(message: string): AiNoteFact | undefined {
   const notes: string[] = [],
     refs: number[] = [];
   const phone = analyzeAiPhoneSource(message);
+  // Colonless lines are excluded only when their role is independently known.
+  // An arbitrary labelled-looking sentence must not erase a fulfillment note.
+  const itemMap = aiSourceItems(message);
+  const itemLines = new Set(itemMap?.flatMap((item) => item.item_lines) ?? []);
+  const name = aiCustomerNameFact(message);
+  const addressLines = new Set(aiAddressFacts(message).address?.lines ?? []);
   let excluded = false;
   for (const [index, raw] of message.split(/\r?\n/).entries()) {
     const line = raw.trim();
@@ -30,6 +39,19 @@ export function aiNoteFact(message: string): AiNoteFact | undefined {
       continue;
     }
     if (businessLabel.test(line)) continue;
+    if (
+      itemMap &&
+      (itemLines.has(index + 1) ||
+        name?.lines.includes(index + 1) ||
+        addressLines.has(index + 1) ||
+        /^(?:phone|ph|ဖုန်း)\s+[+0-9၀-၉][0-9၀-၉ \t().-]*[0-9၀-၉]$/i.test(
+          line,
+        ) ||
+        /^(?:deli|delivery fee|ပို့ခ)\s+[0-9၀-၉]+(?:,[0-9၀-၉]{3})*(?:\s*(?:MMK|ကျပ်))?$/i.test(
+          line,
+        ))
+    )
+      continue;
     if (paymentOnly.test(line)) {
       excluded = true;
       continue;
